@@ -47,10 +47,9 @@ options = Options()
 driver = webdriver.Firefox(firefox_options=options, firefox_profile=fp, capabilities=firefox_capabilities)
 driver.get("https://page5s.com")
 
-driver.save_screenshot(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'NameOfScreenShotDirectory', 'p.png'))
-driver.save_screenshot( os.path.join(os.path.dirname(os.path.realpath('__file__'))), 'image_chat_logging', 'p.png')
-driver.save_screenshot("p.png")
-
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+screenshotpath = os.path.join(os.path.sep, ROOT_DIR,'Screenshots'+ os.sep)
+driver.get_screenshot_as_file(screenshotpath+"testPngFunction.png")
 driver.quit()
 display.stop()
 vdisplay.stop()
