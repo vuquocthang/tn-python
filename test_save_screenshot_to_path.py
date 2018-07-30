@@ -47,8 +47,7 @@ options = Options()
 driver = webdriver.Firefox(firefox_options=options, firefox_profile=fp, capabilities=firefox_capabilities)
 driver.get("https://page5s.com")
 
-driver.save_screenshot(
-                    os.path.join(os.path.dirname(os.path.realpath('__file__')), 'image_chat_logging', 'p.png'))
+driver.save_screenshot( os.path.join(os.path.dirname(os.path.realpath('__file__'))), 'image_chat_logging', 'p.png')
 driver.save_screenshot("p.png")
 
 driver.quit()
