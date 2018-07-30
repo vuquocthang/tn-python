@@ -4,9 +4,12 @@ import requests
 import threading
 from pyvirtualdisplay import Display
 import time
+import sys, os
 from xvfbwrapper import Xvfb
 
 url = "http://toolnuoi999.tk"
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+logging_path = os.path.join(os.path.sep, ROOT_DIR,'chat-screen-log')
 
 NUM_WORKERS = 2
 
@@ -31,7 +34,6 @@ def work():
             driver = helper._init(clone['ip'], clone['port'], clone['c_user'], clone['xs'])
 
             try:
-
                 helper.newest_message(driver)
                 helper.request_message(driver)
 
@@ -40,10 +42,15 @@ def work():
             except Exception as e:
                 print("Ex 1 : {}".format(e))
 
-            driver.save_screenshot('log-{}.{}'.format( clone['c_user'], 'png' ))
-            driver.quit()
-            display.stop()
-            vdisplay.stop()
+                driver.save_screenshot('{}chat-exception-{}.{}'.format(logging_path, clone['c_user'], 'png'))
+                driver.quit()
+                display.stop()
+                vdisplay.stop()
+            else:
+                driver.save_screenshot('{}chat-success-{}.{}'.format(logging_path, clone['c_user'], 'png' ))
+                driver.quit()
+                display.stop()
+                vdisplay.stop()
         except Exception as e:
             print(e)
 
