@@ -9,8 +9,7 @@ from xvfbwrapper import Xvfb
 
 url = "http://toolnuoi999.tk"
 
-root_dir = os.path.dirname(os.path.abspath(__file__))
-image_logging_path = "{}/{}".format(root_dir, "image_chat_logging")
+logging_path = os.path.join( os.path.dirname(os.path.abspath(__file__)), 'image-chat-logging')
 
 NUM_WORKERS = 2
 
@@ -43,18 +42,16 @@ def work():
             except Exception as e:
                 print("Ex 1 : {}".format(e))
 
-                #driver.save_screenshot('{}/chat-exception-{}.{}'.format(image_logging_path, clone['c_user'], 'png'))
                 driver.save_screenshot(
-                    os.path.join(os.path.dirname(os.path.realpath(__file__)), 'image_chat_logging',
-                                 'chat-exception-{}.{}'.format( clone['c_user'], 'png')))
+                    os.path.join( logging_path , 'chat-exception-{}.{}'.format( clone['c_user'], 'png'))
+                )
                 driver.quit()
                 display.stop()
                 vdisplay.stop()
             else:
-                #driver.save_screenshot('{}/chat-success-{}.{}'.format(image_logging_path, clone['c_user'], 'png' ))
                 driver.save_screenshot(
-                    os.path.join(os.path.dirname(os.path.realpath(__file__)), 'image_chat_logging',
-                                 'chat-success-{}.{}'.format(clone['c_user'], 'png')))
+                    os.path.join(logging_path, 'chat-success-{}.{}'.format(clone['c_user'], 'png'))
+                )
 
                 driver.quit()
                 display.stop()

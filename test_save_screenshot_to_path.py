@@ -51,6 +51,8 @@ print (os.path.dirname(os.path.abspath(__file__)))
 
 path = os.path.join( os.path.dirname(os.path.abspath(__file__)), 'image_logging', 'p.png' )
 
+print (path)
+
 driver.save_screenshot(path)
 
 driver.quit()
