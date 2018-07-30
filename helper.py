@@ -236,7 +236,6 @@ def newest_message(driver):
             link = conversation.get_attribute('href')
             links.append(link)
 
-
         for link in links:
             try:
                 print(link)
@@ -249,9 +248,9 @@ def newest_message(driver):
                 if message is not False:
                     send_message(driver, link, message )
             except Exception as e:
-                print(e)
+                print("Go to conversation exception : {}".format(e))
     except Exception as e:
-        return "error : {}".format(e)
+        return "Send newest message error : {}".format(e)
     else:
         return True
 
