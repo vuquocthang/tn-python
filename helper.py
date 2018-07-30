@@ -98,7 +98,6 @@ def _init2(ip, port):
 
     return driver
 
-
 def _init(ip, port, c_user, xs):
     firefox_capabilities = DesiredCapabilities.FIREFOX.copy()
     firefox_capabilities['marionette'] = True
@@ -247,9 +246,8 @@ def newest_message(driver):
 
                 message = get_message_from_keyword('message', recipient_message, recipient_name)
 
-                print(message)
-
-                send_message(driver, link, message )
+                if message is not False:
+                    send_message(driver, link, message )
             except Exception as e:
                 print(e)
     except Exception as e:
@@ -266,7 +264,7 @@ def get_message_from_keyword(type, keyword, name):
         if keyword.lower() in k['key'].lower():
             return k['value'].replace("[name]", name)
 
-    return 'Xin chào ' + name
+    return False
 
 def get_random_schedule_message_from_server(type, name):
     messages_from_server = requests.post('{}/api/keywords'.format(url), {
