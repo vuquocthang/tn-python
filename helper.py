@@ -15,6 +15,10 @@ from selenium.webdriver.common.proxy import Proxy, ProxyType
 #url = "http://192.168.81.139:8001"
 url = "http://toolnuoi999.tk"
 
+image_chat_logging_folder = "image-chat-logging"
+image_post_logging_folder = "image-post-logging"
+image_addfriend_logging_folder = "image-addfriend-logging"
+
 useragents = [
     "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1",
     "Mozilla/5.0 (Linux; U; Android 4.4.2; en-us; SCH-I535 Build/KOT49H) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
@@ -331,7 +335,6 @@ def message_to_active_users(driver, links):
             driver.find_element_by_name('body').send_keys(message)
             driver.find_element_by_name('Send').click()
 
-
 def add_friend(driver, uid):
     driver.get("https://m.facebook.com/{}".format(uid))
 
@@ -340,7 +343,6 @@ def add_friend(driver, uid):
         driver.find_element_by_xpath("//a[contains(text(), 'OK')]").click()
     except Exception as e:
         driver.find_element_by_xpath("//a[contains(text(), 'Thêm bạn bè')]").click()
-
 
 def active_conversations(driver):
     try:
@@ -429,7 +431,6 @@ def like_first_post(driver, uid):
         driver\
             .find_element_by_xpath("//div[@id='structured_composer_async_container']/div[1]/div[1]//a[contains(text(), 'Like')][1]")\
             .click()
-
 
 def react_first_post(driver, uid, type):
     driver.get("https://m.facebook.com/{}?v=timeline".format(uid))
@@ -526,5 +527,4 @@ def post_status2(driver, text, image_paths):
 
     #driver.find_element_by_class_name("notranslate").send_keys(text)
     #driver.find_element_by_xpath("//div[@data-testid='react-composer-post-button']").click()
-
 

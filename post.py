@@ -5,14 +5,17 @@ import time
 from xvfbwrapper import Xvfb
 import datetime
 import logging
+import sys, os
 logging.basicConfig(filename='post.log',level=logging.DEBUG)
 
 url = "http://toolnuoi999.tk"
 image_path = "/home/toolnuoi999.tk/source/storage/app/post"
 
+logging_path = os.path.join( os.path.dirname(os.path.abspath(__file__)), 'image-post-logging')
+
 while True:
     logging.info("Perform : {}".format(datetime.datetime.now()) )
-    print("=====================Log======================")
+    #print("=====================Log======================")
 
     # get schedules
     schedules = requests.get("{}/api/schedule".format(url)).json()
@@ -53,17 +56,26 @@ while True:
 
                     except Exception as e:
                         print("Ex1 : {}".format(e))
-                        driver.save_screenshot('post-{}.{}'.format( clone['c_user'], 'png'))
+
+                        driver.save_screenshot(
+                            os.path.join(logging_path, 'post-exception-{}.{}'.format(clone['c_user'], 'png'))
+                        )
+
                         driver.quit()
                         display.stop()
                         vdisplay.stop()
                     else:
-                        driver.save_screenshot('post-{}.{}'.format( clone['c_user'], 'png'))
-                        driver.quit()
+
+                        driver.save_screenshot(
+                            os.path.join(logging_path, 'post-success-{}.{}'.format(clone['c_user'], 'png'))
+                        )
+
 
                         requests.post("{}/api/schedule/performed".format(url) , {
                             'post_cat_schedule_id' : schedule['id']
                         })
+
+                        driver.quit()
                         display.stop()
                         vdisplay.stop()
             else:
