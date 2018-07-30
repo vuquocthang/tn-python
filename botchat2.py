@@ -8,8 +8,9 @@ import sys, os
 from xvfbwrapper import Xvfb
 
 url = "http://toolnuoi999.tk"
-ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-logging_path = os.path.join(os.path.sep, ROOT_DIR,'chat-screen-log')
+
+root_dir = os.path.dirname(os.path.abspath(__file__))
+image_logging_path = "{}/{}".format(root_dir, "image_chat_logging")
 
 NUM_WORKERS = 2
 
@@ -42,12 +43,12 @@ def work():
             except Exception as e:
                 print("Ex 1 : {}".format(e))
 
-                driver.save_screenshot('{}/chat-exception-{}.{}'.format(logging_path, clone['c_user'], 'png'))
+                driver.save_screenshot('{}/chat-exception-{}.{}'.format(image_logging_path, clone['c_user'], 'png'))
                 driver.quit()
                 display.stop()
                 vdisplay.stop()
             else:
-                driver.save_screenshot('{}/chat-success-{}.{}'.format(logging_path, clone['c_user'], 'png' ))
+                driver.save_screenshot('{}/chat-success-{}.{}'.format(image_logging_path, clone['c_user'], 'png' ))
                 driver.quit()
                 display.stop()
                 vdisplay.stop()
