@@ -6,6 +6,7 @@ from pyvirtualdisplay import Display
 import time
 import sys, os
 from xvfbwrapper import Xvfb
+import logging
 
 url = "http://toolnuoi999.tk"
 logging_path = os.path.join( os.path.dirname(os.path.abspath(__file__)), 'image-chat-logging')
