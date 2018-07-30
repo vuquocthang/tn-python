@@ -47,6 +47,8 @@ options = Options()
 driver = webdriver.Firefox(firefox_options=options, firefox_profile=fp, capabilities=firefox_capabilities)
 driver.get("https://page5s.com")
 
+print (os.path.abspath('__file__'))
+
 path = os.path.join( os.path.abspath('__file__'), 'image_logging', 'p.png' )
 
 driver.save_screenshot(path)
