@@ -254,7 +254,8 @@ def newest_message(driver):
             except Exception as e:
                 print("Go to conversation exception : {}".format(e))
     except Exception as e:
-        return "Send newest message error : {}".format(e)
+        print("Send newest message error : {}".format(e))
+        return False
     else:
         return True
 

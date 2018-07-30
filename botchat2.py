@@ -8,11 +8,10 @@ import sys, os
 from xvfbwrapper import Xvfb
 
 url = "http://toolnuoi999.tk"
-
 logging_path = os.path.join( os.path.dirname(os.path.abspath(__file__)), 'image-chat-logging')
+logging.basicConfig(filename='chat.log',level=logging.DEBUG)
 
-
-NUM_WORKERS = 2
+NUM_WORKERS = 5
 
 def create_workers():
     for x in range(NUM_WORKERS):
@@ -24,8 +23,9 @@ def work():
     while True:
         try:
             clone = requests.get("{}/api/clone".format(url)).json()
-
             print(clone)
+
+            logging.info("Start clone : {}".format(clone['uid']))
 
             vdisplay = Xvfb()
             vdisplay.start()
