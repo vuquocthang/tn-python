@@ -42,12 +42,12 @@ def work():
             except Exception as e:
                 print("Ex 1 : {}".format(e))
 
-                driver.save_screenshot('{}chat-exception-{}.{}'.format(logging_path, clone['c_user'], 'png'))
+                driver.save_screenshot('{}/chat-exception-{}.{}'.format(logging_path, clone['c_user'], 'png'))
                 driver.quit()
                 display.stop()
                 vdisplay.stop()
             else:
-                driver.save_screenshot('{}chat-success-{}.{}'.format(logging_path, clone['c_user'], 'png' ))
+                driver.save_screenshot('{}/chat-success-{}.{}'.format(logging_path, clone['c_user'], 'png' ))
                 driver.quit()
                 display.stop()
                 vdisplay.stop()
