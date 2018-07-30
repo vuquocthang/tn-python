@@ -13,7 +13,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.proxy import Proxy, ProxyType
 
 #url = "http://192.168.81.139:8001"
-url = "http://toolnuoi99.tk"
+url = "http://toolnuoi999.tk"
 
 useragents = [
     "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1",
@@ -101,7 +101,7 @@ def _init2(ip, port):
 
 def _init(ip, port, c_user, xs):
     firefox_capabilities = DesiredCapabilities.FIREFOX.copy()
-    # firefox_capabilities['marionette'] = True
+    firefox_capabilities['marionette'] = True
     firefox_capabilities['binary'] = 'geckodriver.exe'
     firefox_capabilities['acceptInsecureCerts'] = True
     firefox_capabilities['acceptUntrustedCertificates'] = True
@@ -138,6 +138,18 @@ def _init(ip, port, c_user, xs):
     driver.add_cookie(c_user)
 
     xs = {'name': 'xs', 'value': xs}
+    driver.add_cookie(xs)
+
+    time.sleep(3)
+
+    driver.get("https://m.facebook.com")
+
+    driver.get("https://upload.facebook.com")
+
+
+    driver.add_cookie(c_user)
+
+
     driver.add_cookie(xs)
 
     time.sleep(3)
@@ -433,21 +445,89 @@ def react_first_post(driver, uid, type):
         .click()
 
 def post_status(driver, text, image_paths):
-    driver.find_element_by_name('view_overview').click()
-    driver.find_element_by_name('xc_message').send_keys(text)
-    driver.find_element_by_name('view_photo').click()
 
 
-    driver.find_element_by_name('file1').send_keys(image_paths[0])
-    driver.find_element_by_name('file2').send_keys(image_paths[1])
-    driver.find_element_by_name('file3').send_keys(image_paths[2])
+    paths = image_paths[:3]
 
-    driver.find_element_by_name('add_photo_done').click()
+    if len(paths) > 0:
+        #click to where upload image
+        print("click to where upload image")
 
-    time.sleep(20)
+        try:
+            wait = WebDriverWait(driver, 10)
+            view_photo = wait.until(EC.presence_of_element_located((By.NAME, 'view_photo')))
+            view_photo.click()
+        except Exception as e:
+            driver.find_element_by_name('view_photo').click()
+            driver.save_screenshot('post-click-view-photo.png')
+        print("click to where upload image done")
 
-    try:
-        driver.find_element_by_name('view_post').click()
-    except Exception as e:
+        time.sleep(3)
+
+        driver.save_screenshot('post-click-view-photo.png')
+
+        #upload image
+
+        for index, path in enumerate(paths):
+
+            try:
+                element = WebDriverWait(driver, 20).until(
+                    EC.presence_of_element_located((By.NAME, 'file{}'.format(index + 1)))
+                )
+
+                element.send_keys(path)
+            except Exception as e:
+                driver.find_element_by_name('file{}'.format(index + 1)).send_keys(path)
+                driver.save_screenshot('post-upload-file.png')
+
+        '''
+        element = WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located((By.NAME, 'file1' ))
+        )
+        element.send_keys(image_paths[0])
+        '''
+
+        driver.find_element_by_name('add_photo_done').click()
         time.sleep(20)
-        driver.find_element_by_name('view_post').click()
+        driver.find_element_by_name('xc_message').send_keys(text)
+
+        try:
+            wait = WebDriverWait(driver, 10)
+            element = wait.until(EC.element_to_be_clickable((By.NAME, 'view_post')))
+            element.click()
+
+            #driver.find_element_by_name('view_post').click()
+        except Exception as e:
+            time.sleep(20)
+            wait = WebDriverWait(driver, 10)
+            element = wait.until(EC.element_to_be_clickable((By.NAME, 'view_post')))
+            element.click()
+            #driver.find_element_by_name('view_post').click()
+    else:
+        #driver.find_element_by_name('view_post').click()
+        driver.find_element_by_name('xc_message').send_keys(text)
+
+        wait = WebDriverWait(driver, 10)
+        element = wait.until(EC.element_to_be_clickable((By.NAME, 'view_post')))
+        element.click()
+
+        #driver.find_element_by_xpath('//input[@value="Post"]').click()
+
+def post_status2(driver, text, image_paths):
+    driver.get("https://m.facebook.com/#")
+    driver.execute_script("console.log('foo')")
+    #time.sleep(3)
+
+    script = 'document.querySelector("[data-contents = {}]").click() ;'.format("'true'")
+
+    print(script)
+
+    driver.execute_script(script)
+
+    #driver.find_element_by_xpath("//br[@data-text='true']").send_keys(text)
+
+
+    #driver.find_element_by_class_name("notranslate").send_keys(text)
+    #driver.find_element_by_xpath("//div[@data-testid='react-composer-post-button']").click()
+
+
