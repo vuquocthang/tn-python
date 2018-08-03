@@ -87,7 +87,7 @@ def _init_with_useragent(ip, port):
 def _init_with_extension():
     firefox_capabilities = DesiredCapabilities.FIREFOX.copy()
     # firefox_capabilities['marionette'] = True
-    #firefox_capabilities['binary'] = 'geckodriver.exe'
+    firefox_capabilities['binary'] = '/usr/local/bin/geckodriver'
     firefox_capabilities['acceptInsecureCerts'] = True
     firefox_capabilities['acceptUntrustedCertificates'] = True
     firefox_capabilities['assumeUntrustedCertificateIssuer'] = True
