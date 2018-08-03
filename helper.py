@@ -105,7 +105,7 @@ def _init_with_extension():
     # fp.set_preference('dom.ipc.plugins.enabled.libflashplayer.so', 'false')
     # fp.set_preference("general.useragent.override", random.choice(useragents))
 
-    extension_path = "/home/toolnuoi.com/python/foxyproxy@eric.h.jung.xpi"
+    extension_path = "foxyproxy@eric.h.jung.xpi"
     fp.add_extension(extension_path)
 
     '''
