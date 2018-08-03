@@ -11,13 +11,29 @@ import sys
 import requests
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.proxy import Proxy, ProxyType
+from selenium.webdriver.common.keys import Keys
+import json
+from selenium.webdriver.firefox.firefox_profile import AddonFormatError
+
+class FirefoxProfileWithWebExtensionSupport(webdriver.FirefoxProfile):
+    def _addon_details(self, addon_path):
+        try:
+            return super()._addon_details(addon_path)
+        except AddonFormatError:
+            try:
+                with open(os.path.join(addon_path, 'manifest.json'), 'r') as f:
+                    manifest = json.load(f)
+                    return {
+                        'id': manifest['applications']['gecko']['id'],
+                        'version': manifest['version'],
+                        'name': manifest['name'],
+                        'unpack': False,
+                    }
+            except (IOError, KeyError) as e:
+                raise AddonFormatError(str(e), sys.exc_info()[2])
 
 #url = "http://192.168.81.139:8001"
 url = "http://toolnuoi999.tk"
-
-image_chat_logging_folder = "image-chat-logging"
-image_post_logging_folder = "image-post-logging"
-image_addfriend_logging_folder = "image-addfriend-logging"
 
 useragents = [
     "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1",
@@ -77,7 +93,9 @@ def _init_with_extension():
     firefox_capabilities['assumeUntrustedCertificateIssuer'] = True
     firefox_capabilities['acceptNextAlert'] = True
 
-    fp = webdriver.FirefoxProfile()
+    #fp = webdriver.FirefoxProfile()
+    fp = FirefoxProfileWithWebExtensionSupport()
+
     fp.accept_untrusted_certs = True
     fp.assume_untrusted_cert_issuer = True
     # fp.setAcceptUntrustedCertificates = True
@@ -86,11 +104,9 @@ def _init_with_extension():
     # fp.set_preference('permissions.default.image', 2)
     # fp.set_preference('dom.ipc.plugins.enabled.libflashplayer.so', 'false')
     # fp.set_preference("general.useragent.override", random.choice(useragents))
-    extension_path = os.path.join(os.path.realpath(__file__),
-                                  'foxyproxy@eric.h.jung.xpi')  # Must be the full path to an XPI file!
-    extension_path = "foxyproxy@eric.h.jung.xpi"
 
-    fp.add_extension(extension=extension_path)
+    extension_path = "foxyproxy@eric.h.jung.xpi"
+    fp.add_extension(extension_path)
 
     '''
     fp.set_preference("network.proxy.type", 1)
@@ -107,6 +123,7 @@ def _init_with_extension():
 
     driver = webdriver.Firefox(firefox_options=options, firefox_profile=fp, capabilities=firefox_capabilities)
     return driver
+
 
 def _init2(ip, port):
     firefox_capabilities = DesiredCapabilities.FIREFOX.copy()
@@ -160,7 +177,7 @@ def _init(ip, port, c_user, xs):
     fp.accept_next_alert = True
     fp.set_preference('permissions.default.image', 2)
     fp.set_preference('dom.ipc.plugins.enabled.libflashplayer.so', 'false')
-    #fp.set_preference("general.useragent.override", random.choice(useragents))
+    fp.set_preference("general.useragent.override", random.choice(useragents))
 
     fp.set_preference("network.proxy.type", 1)
     fp.set_preference('network.proxy.http', ip)
@@ -188,17 +205,17 @@ def _init(ip, port, c_user, xs):
 
     driver.get("https://m.facebook.com")
 
+    '''
     driver.get("https://upload.facebook.com")
-
-
     driver.add_cookie(c_user)
-
-
     driver.add_cookie(xs)
 
+    driver.get("https://facebook.com")
+    driver.add_cookie(c_user)
+    driver.add_cookie(xs)
     time.sleep(3)
-
     driver.get("https://m.facebook.com")
+    '''
 
     return driver
 
@@ -217,9 +234,10 @@ def _init_desktop(ip, port, c_user, xs):
     # fp.setAcceptUntrustedCertificates = True
     # fp.setAssumeUntrustedCertificateIssuer = False
     fp.accept_next_alert = True
-    fp.set_preference('permissions.default.image', 2)
-    fp.set_preference('dom.ipc.plugins.enabled.libflashplayer.so', 'false')
+    #fp.set_preference('permissions.default.image', 2)
+    #fp.set_preference('dom.ipc.plugins.enabled.libflashplayer.so', 'false')
     # fp.set_preference("general.useragent.override", random.choice(useragents))
+    fp.set_preference("dom.webnotifications.enabled", False)
 
     fp.set_preference("network.proxy.type", 1)
     fp.set_preference('network.proxy.http', ip)
@@ -235,7 +253,7 @@ def _init_desktop(ip, port, c_user, xs):
 
     driver = webdriver.Firefox(firefox_options=options, firefox_profile=fp, capabilities=firefox_capabilities)
 
-    driver.get("https://facebook.com")
+    driver.get("https://www.facebook.com")
 
     c_user = {'name': 'c_user', 'value': c_user}
     driver.add_cookie(c_user)
@@ -245,7 +263,7 @@ def _init_desktop(ip, port, c_user, xs):
 
     time.sleep(3)
 
-    driver.get("https://facebook.com")
+    driver.get("https://www.facebook.com")
 
     return driver
 
@@ -260,6 +278,30 @@ def message(driver, recipient_id , message):
         return "error : {}".format(e)
     else:
         return True
+
+def accept_friend(driver):
+    driver.get("https://www.facebook.com")
+    driver.get("https://www.facebook.com/find-friends/browser/")
+    time.sleep(10)
+
+    while True:
+        items = driver.find_elements_by_class_name("friendRequestItem")
+
+        if len(items) < 10:
+            break
+
+        for item in items:
+            try:
+                item.find_elements_by_tag_name('button')[0].click()
+                time.sleep(1)
+            except Exception as e:
+                driver.execute_script("window.scrollTo(0, 50)")
+
+        try:
+            driver.find_element_by_id("FriendRequestMorePager").click()
+        except Exception as e:
+            driver.get("https://www.facebook.com/friends/requests/?fcref=jwl")
+            print(e)
 
 def send_message(driver, link, message):
     driver.get(link)
@@ -281,6 +323,7 @@ def newest_message(driver):
             link = conversation.get_attribute('href')
             links.append(link)
 
+
         for link in links:
             try:
                 print(link)
@@ -290,13 +333,13 @@ def newest_message(driver):
 
                 message = get_message_from_keyword('message', recipient_message, recipient_name)
 
-                if message is not False:
-                    send_message(driver, link, message )
+                print(message)
+
+                send_message(driver, link, message )
             except Exception as e:
-                print("Go to conversation exception : {}".format(e))
+                print(e)
     except Exception as e:
-        print("Send newest message error : {}".format(e))
-        return False
+        return "error : {}".format(e)
     else:
         return True
 
@@ -309,7 +352,7 @@ def get_message_from_keyword(type, keyword, name):
         if keyword.lower() in k['key'].lower():
             return k['value'].replace("[name]", name)
 
-    return False
+    return 'Xin chào ' + name
 
 def get_random_schedule_message_from_server(type, name):
     messages_from_server = requests.post('{}/api/keywords'.format(url), {
@@ -379,7 +422,6 @@ def message_to_active_users(driver, links):
 
 def add_friend(driver, uid):
     driver.get("https://m.facebook.com/{}".format(uid))
-
     try:
         driver.find_element_by_xpath("//a[contains(text(), 'Add Friend')]").click()
         driver.find_element_by_xpath("//a[contains(text(), 'OK')]").click()
@@ -570,3 +612,73 @@ def post_status2(driver, text, image_paths):
     #driver.find_element_by_class_name("notranslate").send_keys(text)
     #driver.find_element_by_xpath("//div[@data-testid='react-composer-post-button']").click()
 
+def rep_comment(driver, uid):
+    #go to profile
+    driver.get("https://www.facebook.com/{}".format(uid))
+    time.sleep(3)
+
+    # scroll down
+    #for i in range(5):
+    driver.execute_script("window.scrollTo(0, 50000)")
+
+    #sleep 3 s
+    #time.sleep(5)
+
+    #remove comments that were replied
+    '''
+    var UFIRows = document.getElementsByClassName("UFIRow");
+    
+    for(i=0; i< UFIRows.length; i++){
+        if( UFIRows[i].nextElementSibling != null ){
+            if(UFIRows[i].nextElementSibling.className.includes("UFIReplyList") ){
+                UFIRows[i].nextElementSibling.remove();
+                UFIRows[i].remove();
+            }
+        }
+    }
+    '''
+    script_to_remove_comments  = 'var UFIRows = document.getElementsByClassName("UFIComment");'
+    script_to_remove_comments += 'for(i=0; i< UFIRows.length; i++){'
+    script_to_remove_comments += '  if( UFIRows[i].nextElementSibling != null ){'
+    script_to_remove_comments += '      if(UFIRows[i].nextElementSibling.className.includes("UFIReplyList") ){'
+    script_to_remove_comments += '          UFIRows[i].nextElementSibling.remove();'
+    script_to_remove_comments += '          UFIRows[i].remove();'
+    script_to_remove_comments += '      }'
+    script_to_remove_comments += '  }'
+    script_to_remove_comments += '}'
+
+    print(script_to_remove_comments)
+    driver.execute_script(script_to_remove_comments)
+    driver.execute_script(script_to_remove_comments)
+
+    #scroll down
+    #driver.execute_script("window.scrollTo(0, 5000)")
+
+    time.sleep(10)
+
+    #get post items
+    post_items = driver.find_elements_by_xpath("//div[contains(@id, 'tl_unit_')]")
+
+    for item in post_items:
+        try:
+            newest_cmts = item.find_elements_by_class_name("UFIRow")
+            reply_buttons = item.find_elements_by_class_name("UFICommentActions")
+
+            for index in range(len(newest_cmts)):
+                print("cmt : {}".format(newest_cmts[index].find_element_by_class_name("UFICommentActorAndBody").text ))
+                #UFIReplyLink
+                reply_buttons[index].find_element_by_class_name("UFIReplyLink").click()
+
+                time.sleep(1)
+
+                #input
+                inputs = item.find_elements_by_class_name("notranslate")
+                inputs[index].send_keys("Cmt")
+                inputs[index].send_keys(Keys.ENTER)
+
+                time.sleep(3)
+        except Exception as e:
+            print(e)
+
+
+    #return len(post_items[:10])
