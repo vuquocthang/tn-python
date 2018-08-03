@@ -87,7 +87,7 @@ def _init_with_useragent(ip, port):
 def _init_with_extension():
     firefox_capabilities = DesiredCapabilities.FIREFOX.copy()
     # firefox_capabilities['marionette'] = True
-    firefox_capabilities['binary'] = '/usr/local/bin/geckodriver'
+    #firefox_capabilities['binary'] = '/usr/local/bin/geckodriver'
     firefox_capabilities['acceptInsecureCerts'] = True
     firefox_capabilities['acceptUntrustedCertificates'] = True
     firefox_capabilities['assumeUntrustedCertificateIssuer'] = True
@@ -105,7 +105,7 @@ def _init_with_extension():
     # fp.set_preference('dom.ipc.plugins.enabled.libflashplayer.so', 'false')
     # fp.set_preference("general.useragent.override", random.choice(useragents))
 
-    extension_path = "foxyproxy@eric.h.jung.xpi"
+    extension_path = "/home/toolnuoi999.tk/python/foxyproxy@eric.h.jung.xpi"
     #fp.add_extension(extension_path)
 
     '''
