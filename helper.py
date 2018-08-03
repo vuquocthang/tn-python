@@ -93,8 +93,8 @@ def _init_with_extension():
     firefox_capabilities['assumeUntrustedCertificateIssuer'] = True
     firefox_capabilities['acceptNextAlert'] = True
 
-    fp = webdriver.FirefoxProfile()
-    #fp = FirefoxProfileWithWebExtensionSupport()
+    #fp = webdriver.FirefoxProfile()
+    fp = FirefoxProfileWithWebExtensionSupport()
 
     fp.accept_untrusted_certs = True
     fp.assume_untrusted_cert_issuer = True
@@ -105,8 +105,8 @@ def _init_with_extension():
     # fp.set_preference('dom.ipc.plugins.enabled.libflashplayer.so', 'false')
     # fp.set_preference("general.useragent.override", random.choice(useragents))
 
-    extension_path = "/home/toolnuoi999.tk/python/foxyproxy@eric.h.jung.xpi"
-    #fp.add_extension(extension_path)
+    extension_path = "/home/toolnuoi.com/python/foxyproxy@eric.h.jung.xpi"
+    fp.add_extension(extension_path)
 
     '''
     fp.set_preference("network.proxy.type", 1)
@@ -122,7 +122,7 @@ def _init_with_extension():
     # options.add_argument("--headless")
 
     driver = webdriver.Firefox(firefox_options=options, firefox_profile=fp, capabilities=firefox_capabilities)
-    driver.install_addon(extension_path, temporary=True)
+    #driver.install_addon(extension_path, temporary=True)
     return driver
 
 
