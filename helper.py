@@ -84,10 +84,10 @@ def _init_with_useragent(ip, port):
     return driver
 
 
-def _init_with_extension():
+def _init_with_extension(ip, port):
     firefox_capabilities = DesiredCapabilities.FIREFOX.copy()
     # firefox_capabilities['marionette'] = True
-    #firefox_capabilities['binary'] = '/usr/local/bin/geckodriver'
+    #firefox_capabilities['binary'] = 'geckodriver.exe'
     firefox_capabilities['acceptInsecureCerts'] = True
     firefox_capabilities['acceptUntrustedCertificates'] = True
     firefox_capabilities['assumeUntrustedCertificateIssuer'] = True
@@ -108,21 +108,31 @@ def _init_with_extension():
     extension_path = "foxyproxy@eric.h.jung.xpi"
     fp.add_extension(extension_path)
 
-    '''
-    fp.set_preference("network.proxy.type", 1)
-    fp.set_preference('network.proxy.http', ip)
-    fp.set_preference('network.proxy.http_port', port)
-    fp.set_preference('network.proxy.ssl', ip)
-    fp.set_preference('network.proxy.ssl_port', port)
-    '''
-
     fp.update_preferences()
 
     options = Options()
     # options.add_argument("--headless")
 
     driver = webdriver.Firefox(firefox_options=options, firefox_profile=fp, capabilities=firefox_capabilities)
-    #driver.install_addon(extension_path, temporary=True)
+
+    username = "hohzaipa"
+    password = "Em4q6QYK"
+
+    driver.execute_script("window.scrollTo(0, 1000)")
+
+    driver.find_element_by_class_name("button").click()
+    driver.find_element_by_xpath("//*[@id='mode']//option[2]").click()
+
+    driver.find_elements_by_class_name("show-for-medium")[0].click()
+    driver.find_element_by_xpath("//*[@id='newProxyType']/option[@value=3]").click()
+
+    driver.find_element_by_id("newProxyAddress").send_keys(ip)
+    driver.find_element_by_id("newProxyPort").send_keys(port)
+    driver.find_element_by_id("newProxyUsername").send_keys(username)
+    driver.find_element_by_id("newProxyPassword").send_keys(password)
+
+    driver.find_element_by_id("newProxySave").click()
+
     return driver
 
 
@@ -162,6 +172,7 @@ def _init2(ip, port):
     return driver
 
 def _init(ip, port, c_user, xs):
+    '''
     firefox_capabilities = DesiredCapabilities.FIREFOX.copy()
     firefox_capabilities['marionette'] = True
     firefox_capabilities['binary'] = 'geckodriver.exe'
@@ -193,6 +204,9 @@ def _init(ip, port, c_user, xs):
     #options.add_argument("--headless")
 
     driver = webdriver.Firefox(firefox_options=options, firefox_profile=fp, capabilities=firefox_capabilities)
+    '''
+
+    driver = _init_with_extension(ip, port)
 
     driver.get("https://m.facebook.com")
 

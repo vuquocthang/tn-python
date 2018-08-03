@@ -8,10 +8,12 @@ port = "21169"
 username = "hohzaipa"
 password = "Em4q6QYK"
 
+'''
 vdisplay = Xvfb()
 vdisplay.start()
 display = Display(visible=0, size=(800, 600))
 display.start()
+'''
 
 driver = helper._init_with_extension()
 
@@ -36,6 +38,8 @@ driver.get("https://api.ipify.org/?format=json")
 
 driver.save_screenshot("ip.png")
 
+'''
 driver.quit()
 display.stop()
 vdisplay.stop()
+'''
