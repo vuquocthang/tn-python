@@ -67,6 +67,47 @@ def _init_with_useragent(ip, port):
 
     return driver
 
+
+def _init_with_extension():
+    firefox_capabilities = DesiredCapabilities.FIREFOX.copy()
+    # firefox_capabilities['marionette'] = True
+    firefox_capabilities['binary'] = 'geckodriver.exe'
+    firefox_capabilities['acceptInsecureCerts'] = True
+    firefox_capabilities['acceptUntrustedCertificates'] = True
+    firefox_capabilities['assumeUntrustedCertificateIssuer'] = True
+    firefox_capabilities['acceptNextAlert'] = True
+
+    fp = webdriver.FirefoxProfile()
+    fp.accept_untrusted_certs = True
+    fp.assume_untrusted_cert_issuer = True
+    # fp.setAcceptUntrustedCertificates = True
+    # fp.setAssumeUntrustedCertificateIssuer = False
+    fp.accept_next_alert = True
+    # fp.set_preference('permissions.default.image', 2)
+    # fp.set_preference('dom.ipc.plugins.enabled.libflashplayer.so', 'false')
+    # fp.set_preference("general.useragent.override", random.choice(useragents))
+    extension_path = os.path.join(os.path.realpath(__file__),
+                                  'foxyproxy@eric.h.jung.xpi')  # Must be the full path to an XPI file!
+    extension_path = "foxyproxy@eric.h.jung.xpi"
+
+    fp.add_extension(extension=extension_path)
+
+    '''
+    fp.set_preference("network.proxy.type", 1)
+    fp.set_preference('network.proxy.http', ip)
+    fp.set_preference('network.proxy.http_port', port)
+    fp.set_preference('network.proxy.ssl', ip)
+    fp.set_preference('network.proxy.ssl_port', port)
+    '''
+
+    fp.update_preferences()
+
+    options = Options()
+    # options.add_argument("--headless")
+
+    driver = webdriver.Firefox(firefox_options=options, firefox_profile=fp, capabilities=firefox_capabilities)
+    return driver
+
 def _init2(ip, port):
     firefox_capabilities = DesiredCapabilities.FIREFOX.copy()
     # firefox_capabilities['marionette'] = True
