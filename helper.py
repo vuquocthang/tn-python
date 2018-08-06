@@ -597,7 +597,7 @@ def post_status(driver, text, image_paths):
             view_photo.click()
         except Exception as e:
             print("click view_photo ex : {}".format(e))
-            
+
         print("click to where upload image done")
 
         time.sleep(3)

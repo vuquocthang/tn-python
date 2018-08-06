@@ -34,7 +34,9 @@ while True:
 
                     # init driver
                     useragent = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0"
-                    driver = helper._init_with_useragent(clone['ip'], clone['port'], clone['c_user'], clone['xs'], useragent)
+                    #driver = helper._init_with_useragent(clone['ip'], clone['port'], clone['c_user'], clone['xs'], useragent)
+                    driver = helper._init(clone['ip'], clone['port'], clone['c_user'], clone['xs'])
+
                     driver.get("https://facebook.com")
                     time.sleep(10)
                     driver.save_screenshot("init.png")
