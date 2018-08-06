@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "manifest_version": 2,
   "name": "Auth Proxy",
@@ -14,4 +15,22 @@
       "run_at": "document_start"
     }
   ]
+=======
+{
+  "manifest_version": 2,
+  "name": "Auth Proxy",
+  "version": "1.0.0",
+  "applications": {
+    "gecko": {
+      "id": "foxyproxy@eric.h.jung.xpi"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+>>>>>>> fe45538839ec3ad19d0d3f68e6f16e124e7e4624
 }

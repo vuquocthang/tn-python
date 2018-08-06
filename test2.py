@@ -1,5 +1,6 @@
 import helper
 from pyvirtualdisplay import Display
+<<<<<<< HEAD
 import datetime
 
 '''
@@ -41,3 +42,16 @@ driver = helper._init(ip, port, c_user, xs)
 #helper.accept_friend(driver)
 #driver.quit()
 #display.stop()
+=======
+
+c_user = "100025897411907"
+xs = "19%3ABe_U9Sr2-bQ89A%3A2%3A1525300962%3A-1%3A-1"
+ip = "5.104.176.199"
+port = 1080
+
+display = Display(visible=0, size=(800, 600))
+display.start()
+driver = helper._init(ip, port, c_user, xs)
+driver.quit()
+display.stop()
+>>>>>>> fe45538839ec3ad19d0d3f68e6f16e124e7e4624
