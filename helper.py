@@ -54,6 +54,7 @@ def _init_with_useragent(ip, port, c_user, xs, useragent):
     firefox_capabilities = DesiredCapabilities.FIREFOX.copy()
     firefox_capabilities['acceptInsecureCerts'] = True
     firefox_capabilities['marionette'] = True
+    firefox_capabilities['binary'] = '/usr/local/bin/geckodriver'
     firefox_capabilities['acceptUntrustedCertificates'] = True
     firefox_capabilities['assumeUntrustedCertificateIssuer'] = True
     firefox_capabilities['acceptNextAlert'] = True
@@ -113,7 +114,7 @@ def _init_with_useragent(ip, port, c_user, xs, useragent):
 def _init_with_extension(ip, port):
     firefox_capabilities = DesiredCapabilities.FIREFOX.copy()
     firefox_capabilities['marionette'] = True
-    # firefox_capabilities['binary'] = 'geckodriver.exe'
+    firefox_capabilities['binary'] = '/usr/local/bin/geckodriver'
     firefox_capabilities['acceptInsecureCerts'] = True
     firefox_capabilities['acceptUntrustedCertificates'] = True
     firefox_capabilities['assumeUntrustedCertificateIssuer'] = True
