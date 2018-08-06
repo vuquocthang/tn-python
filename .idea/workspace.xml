@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ca71d365-ca32-4f4b-904a-838adb97c3b2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper.py" afterPath="$PROJECT_DIR$/helper.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local-test.py" afterPath="$PROJECT_DIR$/local-test.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,12 +16,12 @@
       <file leaf-file-name="helper.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/helper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-250">
-              <caret line="606" column="34" lean-forward="false" selection-start-line="606" selection-start-column="34" selection-end-line="606" selection-end-column="34" />
+            <state relative-caret-position="141">
+              <caret line="599" column="12" lean-forward="false" selection-start-line="599" selection-start-column="12" selection-end-line="599" selection-end-column="12" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
                 <element signature="e#6916#8256#0" expanded="false" />
-                <element signature="e#22928#25380#0" expanded="false" />
+                <element signature="e#22871#25323#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -649,12 +648,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/helper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-250">
-          <caret line="606" column="34" lean-forward="false" selection-start-line="606" selection-start-column="34" selection-end-line="606" selection-end-column="34" />
+        <state relative-caret-position="141">
+          <caret line="599" column="12" lean-forward="false" selection-start-line="599" selection-start-column="12" selection-end-line="599" selection-end-column="12" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
             <element signature="e#6916#8256#0" expanded="false" />
-            <element signature="e#22928#25380#0" expanded="false" />
+            <element signature="e#22871#25323#0" expanded="false" />
           </folding>
         </state>
       </provider>

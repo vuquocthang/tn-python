@@ -596,8 +596,8 @@ def post_status(driver, text, image_paths):
             view_photo = wait.until(EC.presence_of_element_located((By.NAME, 'view_photo')))
             view_photo.click()
         except Exception as e:
-            driver.find_element_by_name('view_photo').click()
-            driver.save_screenshot('post-click-view-photo.png')
+            print("click view_photo ex : {}".format(e))
+            
         print("click to where upload image done")
 
         time.sleep(3)
