@@ -14,10 +14,6 @@ image_path = "/home/toolnuoi999.tk/source/storage/app/post"
 logging_path = os.path.join( os.path.dirname(os.path.abspath(__file__)), 'image-post-logging')
 
 while True:
-    logging.info("Perform : {}".format(datetime.datetime.now()) )
-    #print("=====================Log======================")
-
-    # get schedules
     schedules = requests.get("{}/api/schedule".format(url)).json()
 
     now = datetime.datetime.now()
@@ -42,8 +38,7 @@ while True:
                     useragent = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0"
                     driver = helper._init_with_useragent(clone['ip'], clone['port'], clone['c_user'], clone['xs'], useragent)
                     driver.get("https://facebook.com")
-
-                    driver.save_screenshot("init.png")
+                    time.sleep(10)
 
                     try:
                         # files
@@ -58,7 +53,7 @@ while True:
                         helper.post_status2(driver, schedule['post']['text'], image_paths)
 
                     except Exception as e:
-                        print("Ex1 : {}".format(e))
+                        print("Exception : {}".format(e))
 
                         driver.save_screenshot(
                             os.path.join(logging_path, 'post-exception-{}.{}'.format(clone['c_user'], 'png'))
