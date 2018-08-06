@@ -605,7 +605,6 @@ def post_status(driver, text, image_paths):
         driver.save_screenshot('post-click-view-photo.png')
 
         # upload image
-
         for index, path in enumerate(paths):
 
             try:
@@ -618,14 +617,16 @@ def post_status(driver, text, image_paths):
                 driver.find_element_by_name('file{}'.format(index + 1)).send_keys(path)
                 driver.save_screenshot('post-upload-file.png')
 
-        '''
-        element = WebDriverWait(driver, 20).until(
-            EC.presence_of_element_located((By.NAME, 'file1' ))
-        )
-        element.send_keys(image_paths[0])
-        '''
+        try:
+            element = WebDriverWait(driver, 20).until(
+                EC.presence_of_element_located((By.NAME, "add_photo_done"))
+            )
 
-        driver.find_element_by_name('add_photo_done').click()
+            element.click()
+        except Exception as e:
+            #driver.find_element_by_name('add_photo_done').click()
+            print("Click add photo done ex : {}".format(e))
+
         time.sleep(20)
         driver.find_element_by_name('xc_message').send_keys(text)
 
@@ -634,22 +635,16 @@ def post_status(driver, text, image_paths):
             element = wait.until(EC.element_to_be_clickable((By.NAME, 'view_post')))
             element.click()
 
-            # driver.find_element_by_name('view_post').click()
         except Exception as e:
             time.sleep(20)
             wait = WebDriverWait(driver, 10)
             element = wait.until(EC.element_to_be_clickable((By.NAME, 'view_post')))
             element.click()
-            # driver.find_element_by_name('view_post').click()
     else:
-        # driver.find_element_by_name('view_post').click()
         driver.find_element_by_name('xc_message').send_keys(text)
-
         wait = WebDriverWait(driver, 10)
         element = wait.until(EC.element_to_be_clickable((By.NAME, 'view_post')))
         element.click()
-
-        # driver.find_element_by_xpath('//input[@value="Post"]').click()
 
 
 def post_status2(driver, text, image_paths):
