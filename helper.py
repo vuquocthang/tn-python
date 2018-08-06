@@ -79,6 +79,8 @@ def _init_with_useragent(ip, port, c_user, xs, useragent):
 
     driver.execute_script("window.scrollTo(0, 2000)")
 
+    driver.save_screenshot("login-proxy.png")
+
     driver.find_element_by_class_name("button").click()
     driver.find_element_by_xpath("//*[@id='mode']//option[2]").click()
 

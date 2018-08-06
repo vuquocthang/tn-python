@@ -50,7 +50,6 @@ while True:
 
                         # post
                         helper.post_status2(driver, schedule['post']['text'], image_paths)
-
                     except Exception as e:
                         print("Exception : {}".format(e))
 

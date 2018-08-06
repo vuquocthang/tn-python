@@ -1,6 +1,7 @@
 test.py
-__pycache__
+/__pycache__
 geckodriver.log
 post.log
-image
+/image
 geckodriver.exe
+/image-post-logging
