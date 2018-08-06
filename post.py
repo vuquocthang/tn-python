@@ -64,6 +64,7 @@ while True:
                         display.stop()
                         vdisplay.stop()
                     else:
+                        print("Post status successfully")
 
                         driver.save_screenshot(
                             os.path.join(logging_path, 'post-success-{}.{}'.format(clone['c_user'], 'png'))
