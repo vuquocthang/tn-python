@@ -236,8 +236,6 @@ def _init(ip, port, c_user, xs):
 
     driver = _init_with_extension(ip, port)
 
-    driver.get("https://www.facebook.com")
-
     c_user = {
         "domain": ".facebook.com",
         'name': 'c_user',
@@ -249,28 +247,14 @@ def _init(ip, port, c_user, xs):
         "value": xs
     }
 
+    driver.get("https://www.facebook.com")
     driver.add_cookie(c_user)
     driver.add_cookie(xs)
     driver.get("https://www.facebook.com")
 
     driver.get("https://m.facebook.com")
-
-
-    c_user = {
-        "domain": ".facebook.com",
-        'name': 'c_user',
-        'value': c_user
-    }
-    xs = {
-        "domain": ".facebook.com",
-        "name": "xs",
-        "value": xs
-    }
-
     driver.add_cookie(c_user)
     driver.add_cookie(xs)
-
-    time.sleep(3)
     driver.get("https://m.facebook.com")
 
     return driver
