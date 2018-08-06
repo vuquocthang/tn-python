@@ -23,29 +23,20 @@ def add_friend():
         clone = json.loads(request.form['clone'])
         print(clone)
 
-        #proxy = json.loads(request.form['proxy'])
-        #print(proxy)
-
-        uids = json.loads(request.form['uids'])
-        print(uids)
-
         ip = clone['ip']
         port = clone['port']
-
         c_user = clone['c_user']
         xs = clone['xs']
 
         driver = helper._init(ip, port, c_user, xs)
 
-        for uid in uids:
+        for uid in clone['uids']:
             try:
                 print(uid['uid'])
                 helper.add_friend(driver, uid['uid'])
-
-                time.sleep(10)
-
             except Exception as e:
                 print(e)
+            time.sleep(3)
 
         driver.quit()
     return 'Done'
@@ -65,9 +56,7 @@ def post():
         xs = clone['xs']
 
         text = data[0]['text']
-
         imagePaths = []
-
         basepath = "home/toolnuoi.com/source/storage/app/post/"
 
         for item in data:

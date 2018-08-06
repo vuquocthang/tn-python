@@ -5,7 +5,7 @@ import threading
 
 #url = "http://192.168.81.139:8001"
 
-url = "http://toolnuoi99.tk"
+url = "http://toolnuoi999.tk"
 
 NUM_WORKERS = 1
 
