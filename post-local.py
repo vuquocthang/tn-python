@@ -1,8 +1,6 @@
 import helper
 import requests
-from pyvirtualdisplay import Display
 import time
-from xvfbwrapper import Xvfb
 import datetime
 import logging
 import sys, os
@@ -26,12 +24,6 @@ while True:
                 clones = schedule['clones']
 
                 for clone in clones:
-                    # init display
-                    vdisplay = Xvfb()
-                    vdisplay.start()
-                    display = Display(visible=0, size=(800, 600))
-                    display.start()
-
                     # init driver
                     useragent = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0"
                     driver = helper._init_with_useragent(clone['ip'], clone['port'], clone['c_user'], clone['xs'], useragent)
@@ -58,9 +50,6 @@ while True:
                             os.path.join(logging_path, 'post-exception-{}.{}'.format(clone['c_user'], 'png'))
                         )
 
-                        driver.quit()
-                        display.stop()
-                        vdisplay.stop()
                     else:
                         print("Post status successfully")
 
@@ -71,10 +60,6 @@ while True:
                         requests.post("{}/api/schedule/performed".format(url) , {
                             'post_cat_schedule_id' : schedule['id']
                         })
-
-                        driver.quit()
-                        display.stop()
-                        vdisplay.stop()
             else:
                 time.sleep(5)
     except Exception as e:
