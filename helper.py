@@ -592,7 +592,7 @@ def post_status(driver, text, image_paths):
         print("click to where upload image")
 
         try:
-            wait = WebDriverWait(driver, 10)
+            wait = WebDriverWait(driver, 15)
             view_photo = wait.until(EC.presence_of_element_located((By.NAME, 'view_photo')))
             view_photo.click()
         except Exception as e:
