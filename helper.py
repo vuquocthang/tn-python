@@ -653,6 +653,8 @@ def post_status(driver, text, image_paths):
 
 
 def post_status2(driver, text, image_paths):
+    time.sleep(5)
+
     for path in image_paths:
         print(path)
         driver.find_element_by_name("composer_photo[]").send_keys(path)

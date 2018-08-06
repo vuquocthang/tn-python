@@ -73,7 +73,6 @@ while True:
                             os.path.join(logging_path, 'post-success-{}.{}'.format(clone['c_user'], 'png'))
                         )
 
-
                         requests.post("{}/api/schedule/performed".format(url) , {
                             'post_cat_schedule_id' : schedule['id']
                         })
