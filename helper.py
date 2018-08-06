@@ -74,24 +74,22 @@ def _init_with_useragent(ip, port, c_user, xs, useragent):
 
     driver = webdriver.Firefox(firefox_options=options, firefox_profile=fp, capabilities=firefox_capabilities)
 
-    username = "hohzaipa"
-    password = "Em4q6QYK"
-
-    driver.execute_script("window.scrollTo(0, 2000)")
-
-    driver.save_screenshot("login-proxy.png")
-
-    driver.find_element_by_class_name("button").click()
-    driver.find_element_by_xpath("//*[@id='mode']//option[2]").click()
-
-    driver.find_elements_by_class_name("show-for-medium")[0].click()
-    driver.find_element_by_xpath("//*[@id='newProxyType']/option[@value=3]").click()
-
-    driver.find_element_by_id("newProxyAddress").send_keys(ip)
-    driver.find_element_by_id("newProxyPort").send_keys(port)
-    driver.find_element_by_id("newProxyUsername").send_keys(username)
-    driver.find_element_by_id("newProxyPassword").send_keys(password)
-    driver.find_element_by_id("newProxySave").click()
+    try:
+        username = "hohzaipa"
+        password = "Em4q6QYK"
+        driver.execute_script("window.scrollTo(0, 2000)")
+        driver.save_screenshot("login-proxy.png")
+        driver.find_element_by_class_name("button").click()
+        driver.find_element_by_xpath("//*[@id='mode']//option[2]").click()
+        driver.find_elements_by_class_name("show-for-medium")[0].click()
+        driver.find_element_by_xpath("//*[@id='newProxyType']/option[@value=3]").click()
+        driver.find_element_by_id("newProxyAddress").send_keys(ip)
+        driver.find_element_by_id("newProxyPort").send_keys(port)
+        driver.find_element_by_id("newProxyUsername").send_keys(username)
+        driver.find_element_by_id("newProxyPassword").send_keys(password)
+        driver.find_element_by_id("newProxySave").click()
+    except Exception as e:
+        print("Login proxy exception : {}".format(e))
 
     driver.get("https://facebook.com")
     c_user = {
