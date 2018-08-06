@@ -39,6 +39,7 @@ while True:
                     driver = helper._init_with_useragent(clone['ip'], clone['port'], clone['c_user'], clone['xs'], useragent)
                     driver.get("https://facebook.com")
                     time.sleep(10)
+                    driver.save_screenshot("init.png")
 
                     try:
                         # files
