@@ -39,20 +39,23 @@ while True:
                     display.start()
 
                     # init driver
-                    driver = helper._init( clone['ip'], clone['port'], clone['c_user'], clone['xs'])
+
+
+                    useragent = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0"
+                    driver = helper._init_with_useragent(clone['ip'], clone['port'], clone['c_user'], clone['xs'], useragent)
+                    driver.get("https://facebook.com")
 
                     try:
                         # files
                         files = schedule['post']['files']
 
                         # image path
-                        imagepaths = []
-
+                        image_paths = []
                         for file in files:
-                            imagepaths.append("{}/{}".format(image_path, file['filename']))
+                            image_paths.append("{}/{}".format(image_path, file['filename']))
 
                         # post
-                        helper.post_status(driver, schedule['post']['text'], imagepaths)
+                        helper.post_status2(driver, schedule['post']['text'], image_paths)
 
                     except Exception as e:
                         print("Ex1 : {}".format(e))
