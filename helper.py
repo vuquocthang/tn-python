@@ -604,6 +604,9 @@ def post_status(driver, text, image_paths):
 
         driver.save_screenshot('post-click-view-photo.png')
 
+        driver.implicitly_wait(10)
+        print("begin upload images")
+
         # upload image
         for index, path in enumerate(paths):
 

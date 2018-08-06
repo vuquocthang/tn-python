@@ -8,6 +8,7 @@ c_user = "100011668026584"
 xs = "2%3Am9V7CKveVOXaCA%3A2%3A1533460435%3A16846%3A6347"
 
 driver = helper._init_with_useragent(ip, port, c_user, xs, useragent)
+driver.implicitly_wait(10)
 
 driver.get("https://facebook.com")
 
