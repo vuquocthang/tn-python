@@ -8,3 +8,6 @@ image-chat-logging/
 image/
 geckodriver.exe
 login-proxy.png
+*.png
+*.jpg
+*.log
