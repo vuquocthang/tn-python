@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Auth Proxy",
+  "version": "1.0.0",
+  "applications": {
+    "gecko": {
+      "id": "foxyproxy@eric.h.jung.xpi"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
