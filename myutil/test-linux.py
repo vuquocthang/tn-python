@@ -1,6 +1,6 @@
 from pyvirtualdisplay import Display
 import datetime
-from util.init import _init
+from myutil.init import _init
 from xvfbwrapper import Xvfb
 
 c_user = "100011668026584"

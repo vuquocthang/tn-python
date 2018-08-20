@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca71d365-ca32-4f4b-904a-838adb97c3b2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/util/test-linux.py" afterPath="$PROJECT_DIR$/util/test-linux.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/util/foxyproxy@eric.h.jung.xpi" afterPath="$PROJECT_DIR$/myutil/foxyproxy@eric.h.jung.xpi" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/util/init.py" afterPath="$PROJECT_DIR$/myutil/init.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/util/manifest.json" afterPath="$PROJECT_DIR$/myutil/manifest.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/util/test-linux.py" afterPath="$PROJECT_DIR$/myutil/test-linux.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,7 +43,7 @@
         </entry>
       </file>
       <file leaf-file-name="init.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util/init.py">
+        <entry file="file://$PROJECT_DIR$/myutil/init.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="227">
               <caret line="363" column="0" lean-forward="false" selection-start-line="363" selection-start-column="0" selection-end-line="363" selection-end-column="0" />
@@ -57,7 +60,7 @@
         </entry>
       </file>
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util/test.py">
+        <entry file="file://$PROJECT_DIR$/myutil/test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
               <caret line="1" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
@@ -67,10 +70,10 @@
         </entry>
       </file>
       <file leaf-file-name="test-linux.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/util/test-linux.py">
+        <entry file="file://$PROJECT_DIR$/myutil/test-linux.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+            <state relative-caret-position="323">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -152,6 +155,7 @@
         <option value="$PROJECT_DIR$/util/init.py" />
         <option value="$PROJECT_DIR$/util/test.py" />
         <option value="$PROJECT_DIR$/util/test-linux.py" />
+        <option value="$PROJECT_DIR$/myutil/test-linux.py" />
       </list>
     </option>
   </component>
@@ -193,7 +197,7 @@
             <path>
               <item name="pythonsource" type="b2602c69:ProjectViewProjectNode" />
               <item name="pythonsource" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="myutil" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -526,7 +530,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/geckodriver.log">
+    <entry file="file://$PROJECT_DIR$/myutil/geckodriver.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -534,7 +538,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/manifest.json">
+    <entry file="file://$PROJECT_DIR$/myutil/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
@@ -542,7 +546,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/manifest.json">
+    <entry file="file://$PROJECT_DIR$/myutil/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
@@ -594,12 +598,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/login-proxy.png">
+    <entry file="file://$PROJECT_DIR$/myutil/login-proxy.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/init.py">
+    <entry file="file://$PROJECT_DIR$/myutil/init.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
           <caret line="363" column="0" lean-forward="false" selection-start-line="363" selection-start-column="0" selection-end-line="363" selection-end-column="0" />
@@ -614,7 +618,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/test.py">
+    <entry file="file://$PROJECT_DIR$/myutil/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
@@ -630,10 +634,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/test-linux.py">
+    <entry file="file://$PROJECT_DIR$/myutil/test-linux.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
