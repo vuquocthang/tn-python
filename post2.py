@@ -1,4 +1,3 @@
-
 import helper
 import requests
 from pyvirtualdisplay import Display
@@ -7,6 +6,8 @@ from xvfbwrapper import Xvfb
 import datetime
 import logging
 import sys, os
+import myutil.init
+
 logging.basicConfig(filename='post.log',level=logging.DEBUG)
 
 url = "http://toolnuoi999.tk"
@@ -39,7 +40,7 @@ while True:
 
                     try:
                         # init driver
-                        driver = helper._init( clone['ip'], clone['port'], clone['c_user'], clone['xs'])
+                        driver = myutil.init._init( clone['ip'], clone['port'], clone['c_user'], clone['xs'])
                     except Exception as e:
                         if driver is not None:
                             try:
@@ -69,11 +70,6 @@ while True:
                             os.path.join(logging_path, 'post-exception-{}.{}'.format(clone['c_user'], 'png'))
                         )
 
-
-                        driver.quit()
-                        display.stop()
-                        vdisplay.stop()
-
                     else:
                         print("Post status successfully")
 
@@ -84,11 +80,6 @@ while True:
                         requests.post("{}/api/schedule/performed".format(url) , {
                             'post_cat_schedule_id' : schedule['id']
                         })
-
-
-                        driver.quit()
-                        display.stop()
-                        vdisplay.stop()
 
                     if driver is not None:
                         try:
