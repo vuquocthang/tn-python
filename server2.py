@@ -6,6 +6,7 @@ from pyvirtualdisplay import Display
 import helper
 from xvfbwrapper import Xvfb
 import requests
+import myutil.init
 
 api_url = "http://toolnuoi999.tk/api"
 
@@ -37,7 +38,7 @@ def add_friend():
             vdisplay.start()
             display = Display(visible=0, size=(800, 600))
             display.start()
-            driver = helper._init(ip, port, c_user, xs)
+            driver = myutil.init._init(ip, port, c_user, xs)
             driver.save_screenshot('add-begin-{}.{}'.format(c_user.strip(), 'png'))
 
             for uid in clone['uids']:
