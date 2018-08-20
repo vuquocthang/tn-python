@@ -3,6 +3,8 @@ import datetime
 from xvfbwrapper import Xvfb
 import sys
 import os
+
+sys.path.insert(0, os.path.dirname(__file__))
 import init
 
 c_user = "100011668026584"
@@ -16,6 +18,7 @@ display = Display(visible=0, size=(800, 600))
 display.start()
 driver = init._init(ip, port, c_user, xs)
 driver.get("https://www.facebook.com")
+driver.save_screenshot("fb.png")
 
 vdisplay.stop()
 display.stop()
