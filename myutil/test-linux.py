@@ -5,6 +5,7 @@ import sys
 import os
 
 sys.path.insert(0, os.path.dirname(__file__))
+
 import init
 
 c_user = "100011668026584"
