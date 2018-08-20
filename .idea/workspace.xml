@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca71d365-ca32-4f4b-904a-838adb97c3b2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/util/foxyproxy@eric.h.jung.xpi" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/util/init.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/util/manifest.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/util/test-linux.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper.py" afterPath="$PROJECT_DIR$/helper.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restartcore.py" afterPath="$PROJECT_DIR$/restartcore.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.py" afterPath="$PROJECT_DIR$/server.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test2.py" afterPath="$PROJECT_DIR$/test2.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/util/test.py" afterPath="$PROJECT_DIR$/util/test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/util/test-linux.py" afterPath="$PROJECT_DIR$/util/test-linux.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -78,8 +69,8 @@
       <file leaf-file-name="test-linux.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/util/test-linux.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="14" lean-forward="false" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+            <state relative-caret-position="238">
+              <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -641,8 +632,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/util/test-linux.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="14" lean-forward="false" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+        <state relative-caret-position="238">
+          <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>

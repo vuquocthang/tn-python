@@ -1,6 +1,6 @@
 from pyvirtualdisplay import Display
 import datetime
-import util.init
+from util.init import _init
 from xvfbwrapper import Xvfb
 
 c_user = "100011668026584"
@@ -12,7 +12,7 @@ vdisplay = Xvfb()
 vdisplay.start()
 display = Display(visible=0, size=(800, 600))
 display.start()
-driver = util.init._init(ip, port, c_user, xs)
+driver = _init(ip, port, c_user, xs)
 driver.get("https://www.facebook.com")
 
 vdisplay.stop()
