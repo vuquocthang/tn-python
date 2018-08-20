@@ -3,9 +3,7 @@ import datetime
 from xvfbwrapper import Xvfb
 import sys
 import os
-
-sys.path.insert(0, os.path.dirname(__file__))
-from myutil import init
+import init
 
 c_user = "100011668026584"
 xs = "12%3AH-Hccg_y1Y99wg%3A2%3A1534733997%3A16846%3A6347"
