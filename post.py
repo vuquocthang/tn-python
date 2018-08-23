@@ -68,8 +68,8 @@ while True:
                         # image path
                         imagepaths = []
 
-                        # for file in files:
-                        # imagepaths.append("{}/{}".format(image_path, file['filename']))
+                        for file in files:
+                            imagepaths.append("{}/{}".format(image_path, file['filename']))
 
                         # post
                         helper.post_status(driver, schedule['post']['text'], imagepaths)
