@@ -45,8 +45,14 @@ while True:
                         driver.quit()
                         break
 
+                    # files
+                    files = schedule['post']['files']
+
                     # image path
-                    imagepaths = ["a"]
+                    imagepaths = []
+
+                    for file in files:
+                        imagepaths.append("{}/{}".format(image_path, file['filename']))
 
                     # post
                     helper.post_status(driver, schedule['post']['text'], imagepaths)
