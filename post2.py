@@ -19,36 +19,46 @@ while True:
 
     now = datetime.datetime.now()
 
-    try:
-        for schedule in schedules:
-            if(  str(now.hour) == str(schedule['hour']) ):
+    for schedule in schedules:
+        if (str(now.hour) == str(schedule['hour'])):
 
-                print(" Hour : {}".format(now.hour))
-                logging.info("Perform schedule : {}".format(schedule['id']))
+            print(" Hour : {}".format(now.hour))
+            logging.info("Perform schedule : {}".format(schedule['id']))
 
-                clones = schedule['clones']
+            clones = schedule['clones']
 
-                for clone in clones:
+            for clone in clones:
 
-                    # init display
-                    vdisplay = Xvfb()
-                    vdisplay.start()
-                    display = Display(visible=0, size=(800, 600))
-                    display.start()
+                # init display
+                vdisplay = Xvfb()
+                vdisplay.start()
+                display = Display(visible=0, size=(800, 600))
+                display.start()
 
-                    driver = None
+                driver = None
 
-                    try:
-                        # init driver
-                        driver = myutil.init._init( clone['ip'], clone['port'], clone['c_user'], clone['xs'])
-                    except Exception as e:
-                        if driver is not None:
-                            try:
-                                driver.quit()
-                                display.stop()
-                                vdisplay.stop()
-                            except Exception as e:
-                                print(e)
+                try:
+                    # init driver
+                    driver = myutil.init._init(clone['ip'], clone['port'], clone['c_user'], clone['xs'])
+                    check = myutil.init._is_checkpoint(driver, clone)
+
+                    if len(check) == 2:
+                        print("Clone is checkpoint")
+                        check[0].quit()
+                        display.stop()
+                        vdisplay.stop()
+                        break
+
+                except Exception as e:
+                    print("Ex init : {}".format(e))
+                    if driver is not None:
+                        try:
+                            driver.quit()
+                            display.stop()
+                            vdisplay.stop()
+                        except Exception as e:
+                            print(e)
+                else:
 
                     try:
                         # files
@@ -57,14 +67,14 @@ while True:
                         # image path
                         imagepaths = []
 
-                        for file in files:
-                            imagepaths.append("{}/{}".format(image_path, file['filename']))
+                        # for file in files:
+                        # imagepaths.append("{}/{}".format(image_path, file['filename']))
 
                         # post
                         helper.post_status(driver, schedule['post']['text'], imagepaths)
 
                     except Exception as e:
-                        print("Exception : {}".format(e))
+                        print("Exception 1 : {}".format(e))
 
                         driver.save_screenshot(
                             os.path.join(logging_path, 'post-exception-{}.{}'.format(clone['c_user'], 'png'))
@@ -77,26 +87,17 @@ while True:
                             os.path.join(logging_path, 'post-success-{}.{}'.format(clone['c_user'], 'png'))
                         )
 
-                        requests.post("{}/api/schedule/performed".format(url) , {
-                            'post_cat_schedule_id' : schedule['id']
+                        requests.post("{}/api/schedule/performed".format(url), {
+                            'post_cat_schedule_id': schedule['id']
                         })
 
-                    if driver is not None:
-                        try:
-                            driver.quit()
-                        except Exception as e:
-                            print(e)
-
+                if driver is not None:
                     try:
-                        display.stop()
-                        vdisplay.stop()
+                        driver.quit()
                     except Exception as e:
-                        print(e)
+                        print("Ex 2 : {}".format(e))
 
-
-            else:
-                time.sleep(5)
-    except Exception as e:
-        print("Ex : {}".format(e))
-        time.sleep(5)
-
+                display.stop()
+                vdisplay.stop()
+        else:
+            time.sleep(5)

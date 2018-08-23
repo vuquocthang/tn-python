@@ -311,7 +311,6 @@ def _init(ip, port, c_user, xs):
 
     return driver
 
-
 def _init_desktop(ip, port, c_user, xs):
     firefox_capabilities = DesiredCapabilities.FIREFOX.copy()
     # firefox_capabilities['marionette'] = True
@@ -360,4 +359,24 @@ def _init_desktop(ip, port, c_user, xs):
 
     return driver
 
+def _is_checkpoint(driver, clone):
+    current_url = driver.current_url
+
+    if "checkpoint" in current_url:
+        #update clone status
+        try:
+            _update_clone_status(clone, "Checkpoint")
+        except Exception as e:
+            print(e)
+        else:
+            print("Update clone's status successfully !")
+
+        return [driver, "Checkpoint"]
+
+    return  driver
+
+def _update_clone_status(clone, status):
+    requests.put("{}/api/clone/{}".format(url, clone['id']) , {
+        'status' : status
+    })
 
