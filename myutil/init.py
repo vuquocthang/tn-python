@@ -371,7 +371,7 @@ def _is_checkpoint(driver, clone):
         else:
             print("Update clone's status successfully !")
 
-        return [driver, "Checkpoint"]
+        return False
 
     return  driver
 
