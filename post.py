@@ -65,6 +65,7 @@ while True:
 
                     driver.quit()
                 finally:
+                    print("Done")
                     driver.quit()
 
                 display.stop()
