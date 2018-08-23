@@ -304,10 +304,10 @@ def _init(ip, port, c_user, xs):
         "value": xs
     }
 
-    driver.get("https://m.facebook.com")
+    driver.get("https://m.facebook.com/login")
     driver.add_cookie(c_user)
     driver.add_cookie(xs)
-    driver.get("https://m.facebook.com")
+    driver.get("https://m.facebook.com/login")
 
     return driver
 
@@ -372,6 +372,18 @@ def _is_checkpoint(driver, clone):
             print("Update clone's status successfully !")
 
         return False
+
+    if "login" in current_url:
+        # update clone status
+        try:
+            _update_clone_status(clone, "Cookie Die")
+        except Exception as e:
+            print(e)
+        else:
+            print("Update clone's status successfully !")
+
+        return False
+
 
     return  driver
 

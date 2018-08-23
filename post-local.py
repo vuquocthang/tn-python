@@ -29,14 +29,6 @@ while True:
 
             for clone in clones:
 
-                # init display
-                #vdisplay = Xvfb()
-                #vdisplay.start()
-                #display = Display(visible=0, size=(800, 600))
-                #display.start()
-
-                driver = None
-
                 try:
                     # init driver
                     driver = myutil.init._init(clone['ip'], clone['port'], clone['c_user'], clone['xs'])
@@ -50,55 +42,31 @@ while True:
                         break
 
                 except Exception as e:
-                    print("Ex init : {}".format(e))
-
-                    if driver is not None:
-                        try:
-                            driver.quit()
-                            #display.stop()
-                            #vdisplay.stop()
-                        except Exception as e:
-                            print(e)
+                    print("Exception init : {}".format(e))
                 else:
 
                     try:
-                        # files
-                        files = schedule['post']['files']
+                        print(driver)
+
 
                         # image path
                         imagepaths = []
-
-                        # for file in files:
-                        # imagepaths.append("{}/{}".format(image_path, file['filename']))
 
                         # post
                         helper.post_status(driver, schedule['post']['text'], imagepaths)
 
                     except Exception as e:
                         print("Exception 1 : {}".format(e))
-
-                        driver.save_screenshot(
-                            os.path.join(logging_path, 'post-exception-{}.{}'.format(clone['c_user'], 'png'))
-                        )
-
                     else:
                         print("Post status successfully")
-
-                        driver.save_screenshot(
-                            os.path.join(logging_path, 'post-success-{}.{}'.format(clone['c_user'], 'png'))
-                        )
 
                         requests.post("{}/api/schedule/performed".format(url), {
                             'post_cat_schedule_id': schedule['id']
                         })
 
-                if driver is not None:
                     try:
                         driver.quit()
                     except Exception as e:
-                        print("Ex 2 : {}".format(e))
-
-                #display.stop()
-                #vdisplay.stop()
+                        print("Exception 2 : {}".format(e))
         else:
             time.sleep(5)
