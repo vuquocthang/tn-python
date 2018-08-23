@@ -1,7 +1,5 @@
 import helper
 import requests
-#from pyvirtualdisplay import Display
-#from xvfbwrapper import Xvfb
 import time
 import datetime
 import logging
@@ -28,6 +26,7 @@ while True:
             clones = schedule['clones']
 
             for clone in clones:
+                driver = None
 
                 try:
                     # init driver
@@ -37,36 +36,29 @@ while True:
                     if check is False:
                         print("Clone is checkpoint")
                         driver.quit()
-                        #display.stop()
-                        #vdisplay.stop()
                         break
+
+                    # image path
+                    imagepaths = ["a"]
+
+                    # post
+                    helper.post_status(driver, schedule['post']['text'], imagepaths)
+
+                    print("Post status successfully")
+
+                    requests.post("{}/api/schedule/performed".format(url), {
+                        'post_cat_schedule_id': schedule['id']
+                    })
+
+                    driver.quit()
 
                 except Exception as e:
                     print("Exception init : {}".format(e))
-                else:
+                    print(driver)
 
-                    try:
-                        print(driver)
+                    driver.quit()
+                finally:
+                    driver.quit()
 
-
-                        # image path
-                        imagepaths = []
-
-                        # post
-                        helper.post_status(driver, schedule['post']['text'], imagepaths)
-
-                    except Exception as e:
-                        print("Exception 1 : {}".format(e))
-                    else:
-                        print("Post status successfully")
-
-                        requests.post("{}/api/schedule/performed".format(url), {
-                            'post_cat_schedule_id': schedule['id']
-                        })
-
-                    try:
-                        driver.quit()
-                    except Exception as e:
-                        print("Exception 2 : {}".format(e))
         else:
             time.sleep(5)

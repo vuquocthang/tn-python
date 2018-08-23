@@ -696,7 +696,7 @@ def react_first_post(driver, uid, type):
         .click()
 
 
-def post_status(driver, text, image_paths = []):
+def post_status(driver, text, image_paths):
 
     if len(image_paths) > 0:
         paths = image_paths[:3]
