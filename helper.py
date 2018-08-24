@@ -555,7 +555,7 @@ def request_message(driver):
 
                 print(message)
 
-                if message is not None:
+                if message is not False:
                     send_message(driver, link, message)
             except Exception as e:
                 print(e)
