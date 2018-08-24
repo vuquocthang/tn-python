@@ -504,13 +504,13 @@ def newest_message(driver):
         return True
 
 
-def get_message_from_keyword(type, keyword, name):
+def get_message_from_keyword(type, message, name):
     keywords_from_server = requests.post('{}/api/keywords'.format(url), {
         'type': type
     }).json()
 
     for k in keywords_from_server:
-        if keyword.lower() in k['key'].lower():
+        if k['key'].lower() in message.lower():
             return k['value'].replace("[name]", name)
 
     return False
