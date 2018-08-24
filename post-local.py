@@ -38,8 +38,10 @@ while True:
                         driver.quit()
                         break
 
+                    print("Driver : ".format(driver))
+
                     # image path
-                    imagepaths = ["a"]
+                    imagepaths = []
 
                     # post
                     helper.post_status(driver, schedule['post']['text'], imagepaths)

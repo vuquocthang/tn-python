@@ -45,6 +45,8 @@ while True:
                         driver.quit()
                         break
 
+                    print("Driver is None: {}".format(driver is None))    
+
                     # files
                     files = schedule['post']['files']
 
@@ -59,6 +61,10 @@ while True:
 
                     print("Post status successfully")
 
+                    driver.save_screenshot(
+                        os.path.join(logging_path, 'post-success-{}.{}'.format(clone['c_user'], 'png'))
+                    )
+
                     requests.post("{}/api/schedule/performed".format(url), {
                         'post_cat_schedule_id': schedule['id']
                     })
@@ -67,6 +73,11 @@ while True:
 
                 except Exception as e:
                     print("Exception init : {}".format(e))
+
+                    driver.save_screenshot(
+                        os.path.join(logging_path, 'post-exception-{}.{}'.format(clone['c_user'], 'png'))
+                    )
+
                     print(driver)
 
                     driver.quit()

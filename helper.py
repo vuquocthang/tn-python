@@ -698,6 +698,8 @@ def react_first_post(driver, uid, type):
 
 def post_status(driver, text, image_paths):
 
+    print("Image paths : {}".format(image_paths))
+
     if len(image_paths) > 0:
         paths = image_paths[:3]
         # click to where upload image
