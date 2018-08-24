@@ -49,7 +49,13 @@ while True:
                     print("Driver is None: {}".format(driver is None))
 
                     # files
-                    files = schedule['post']['files']
+                    files = []
+
+                    try:
+                        files = schedule['post']['files']
+                    except Exception as e:
+                        print("File ex : ".format(e))
+
 
                     print("Files : ".format(files))
 
@@ -64,6 +70,7 @@ while True:
                     # post
                     helper.post_status(driver, schedule['post']['text'], imagepaths)
 
+                    # success
                     print("Post status successfully")
 
                     driver.save_screenshot(
@@ -82,7 +89,7 @@ while True:
                         os.path.join(logging_path, 'post-exception-{}.{}'.format(clone['c_user'], 'png'))
                     )
                     driver.quit()
-                finally:
+                else:
                     print("Done")
                     driver.quit()
 
