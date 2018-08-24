@@ -49,19 +49,8 @@ while True:
                     print("Driver is None: {}".format(driver is None))
 
                     # files
-                    files = []
-
-
-
-                    try:
-                        if schedule['post']['files'] is not None:
-                            files = schedule['post']['files']
-                    except Exception as e:
-                        print("File ex : ".format(e))
-
-
-                    print("Files : ".format(files))
-
+                    files = schedule['post']['files']
+                    
                     # image path
                     imagepaths = []
 
