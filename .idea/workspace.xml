@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca71d365-ca32-4f4b-904a-838adb97c3b2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/chat-local.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/botchat.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper.py" afterPath="$PROJECT_DIR$/helper.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/post-local.py" afterPath="$PROJECT_DIR$/post-local.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/post.py" afterPath="$PROJECT_DIR$/post.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/botchat2.py" afterPath="$PROJECT_DIR$/chat.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,8 +21,8 @@
       <file leaf-file-name="helper.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/helper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="703" column="31" lean-forward="true" selection-start-line="703" selection-start-column="31" selection-end-line="703" selection-end-column="31" />
+            <state relative-caret-position="257">
+              <caret line="515" column="16" lean-forward="true" selection-start-line="515" selection-start-column="16" selection-end-line="515" selection-end-column="16" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
                 <element signature="e#2711#6112#0" expanded="false" />
@@ -29,15 +31,14 @@
                 <element signature="e#11520#13395#0" expanded="false" />
                 <element signature="e#13443#15095#0" expanded="false" />
                 <element signature="e#15481#16198#0" expanded="false" />
-                <element signature="e#16404#17447#0" expanded="false" />
-                <element signature="e#17505#17778#0" expanded="false" />
-                <element signature="e#17842#18050#0" expanded="false" />
-                <element signature="e#18086#19200#0" expanded="false" />
-                <element signature="e#19251#19902#0" expanded="false" />
-                <element signature="e#19938#20270#0" expanded="false" />
-                <element signature="e#20311#20822#0" expanded="false" />
-                <element signature="e#20864#21113#0" expanded="false" />
-                <element signature="e#21157#22262#0" expanded="false" />
+                <element signature="e#17949#18157#0" expanded="false" />
+                <element signature="e#18193#19307#0" expanded="false" />
+                <element signature="e#19358#20009#0" expanded="false" />
+                <element signature="e#20045#20377#0" expanded="false" />
+                <element signature="e#20418#20929#0" expanded="false" />
+                <element signature="e#20971#21220#0" expanded="false" />
+                <element signature="e#21264#22369#0" expanded="false" />
+                <element signature="e#23546#25742#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -94,11 +95,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="post.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/post.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="47" column="74" lean-forward="true" selection-start-line="47" selection-start-column="74" selection-end-line="47" selection-end-column="74" />
+            <state relative-caret-position="136">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chat.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chat.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="77">
+              <caret line="30" column="21" lean-forward="false" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chat-local.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/chat-local.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="44" column="29" lean-forward="true" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -138,7 +161,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/json.py" />
         <option value="$PROJECT_DIR$/_json.py" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp05689/home/toolnuoi.com/python/index.py" />
@@ -150,12 +172,10 @@
         <option value="$PROJECT_DIR$/phantom.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/ddd.py" />
-        <option value="$PROJECT_DIR$/botchat.py" />
         <option value="$PROJECT_DIR$/geckodriver.log" />
         <option value="$PROJECT_DIR$/test_post_status.py" />
         <option value="$PROJECT_DIR$/test_post_status2.py" />
         <option value="$PROJECT_DIR$/test_post2.py" />
-        <option value="$PROJECT_DIR$/botchat2.py" />
         <option value="$PROJECT_DIR$/post3.py" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp50522/home/hoso.tk/python/index.py" />
         <option value="$USER_HOME$/AppData/Local/Temp/scp12016/home/hoso.tk/python/server.py" />
@@ -184,9 +204,14 @@
         <option value="$PROJECT_DIR$/add-friend-to-group.py" />
         <option value="$PROJECT_DIR$/post2.py" />
         <option value="$PROJECT_DIR$/myutil/init.py" />
-        <option value="$PROJECT_DIR$/helper.py" />
         <option value="$PROJECT_DIR$/post-local.py" />
         <option value="$PROJECT_DIR$/post.py" />
+        <option value="$PROJECT_DIR$/botchat2.py" />
+        <option value="$PROJECT_DIR$/botchat-local.py" />
+        <option value="$PROJECT_DIR$/botchat.py" />
+        <option value="$PROJECT_DIR$/helper.py" />
+        <option value="$PROJECT_DIR$/chat.py" />
+        <option value="$PROJECT_DIR$/chat-local.py" />
       </list>
     </option>
   </component>
@@ -256,7 +281,41 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.post-local">
+  <component name="RunManager" selected="Python.chat-local">
+    <configuration name="botchat-local" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="message" />
+      <option name="SCRIPT_NAME" value="E:\FreelancerProject\Tool Nuôi A Cường\pythonsource\chat-local.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="chat-local" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="message" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chat-local.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="post-local" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -308,54 +367,20 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="server2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="message" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/server2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/myutil" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="message" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/myutil/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.test (1)" />
-      <item index="1" class="java.lang.String" itemvalue="Python.server2" />
-      <item index="2" class="java.lang.String" itemvalue="Python.post2" />
-      <item index="3" class="java.lang.String" itemvalue="Python.post-local" />
-      <item index="4" class="java.lang.String" itemvalue="Python.post" />
+      <item index="0" class="java.lang.String" itemvalue="Python.post2" />
+      <item index="1" class="java.lang.String" itemvalue="Python.post-local" />
+      <item index="2" class="java.lang.String" itemvalue="Python.post" />
+      <item index="3" class="java.lang.String" itemvalue="Python.botchat-local" />
+      <item index="4" class="java.lang.String" itemvalue="Python.chat-local" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.post-local" />
-        <item index="1" class="java.lang.String" itemvalue="Python.post" />
-        <item index="2" class="java.lang.String" itemvalue="Python.post2" />
-        <item index="3" class="java.lang.String" itemvalue="Python.test (1)" />
-        <item index="4" class="java.lang.String" itemvalue="Python.server2" />
+        <item index="0" class="java.lang.String" itemvalue="Python.chat-local" />
+        <item index="1" class="java.lang.String" itemvalue="Python.botchat-local" />
+        <item index="2" class="java.lang.String" itemvalue="Python.post-local" />
+        <item index="3" class="java.lang.String" itemvalue="Python.post" />
+        <item index="4" class="java.lang.String" itemvalue="Python.post2" />
       </list>
     </recent_temporary>
   </component>
@@ -416,7 +441,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/avatars/28059108_742999015910014_6559128080088211638_n.jpg" />
     <entry file="file://$PROJECT_DIR$/index.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="332">
@@ -427,13 +451,6 @@
     <entry file="file://$PROJECT_DIR$/_json.py" />
     <entry file="file://$PROJECT_DIR$/log1531171660.6399457.png" />
     <entry file="file://$PROJECT_DIR$/ddd.py" />
-    <entry file="file://$PROJECT_DIR$/botchat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_post2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
@@ -535,13 +552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/botchat2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -589,9 +599,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-555">
           <caret line="37" column="98" lean-forward="false" selection-start-line="37" selection-start-column="98" selection-end-line="37" selection-end-column="98" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -628,31 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="703" column="31" lean-forward="true" selection-start-line="703" selection-start-column="31" selection-end-line="703" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-            <element signature="e#2711#6112#0" expanded="false" />
-            <element signature="e#6156#10111#0" expanded="false" />
-            <element signature="e#10140#11480#0" expanded="false" />
-            <element signature="e#11520#13395#0" expanded="false" />
-            <element signature="e#13443#15095#0" expanded="false" />
-            <element signature="e#15481#16198#0" expanded="false" />
-            <element signature="e#16404#17447#0" expanded="false" />
-            <element signature="e#17505#17778#0" expanded="false" />
-            <element signature="e#17842#18050#0" expanded="false" />
-            <element signature="e#18086#19200#0" expanded="false" />
-            <element signature="e#19251#19902#0" expanded="false" />
-            <element signature="e#19938#20270#0" expanded="false" />
-            <element signature="e#20311#20822#0" expanded="false" />
-            <element signature="e#20864#21113#0" expanded="false" />
-            <element signature="e#21157#22262#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/post-local.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
@@ -665,8 +648,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/post.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="47" column="74" lean-forward="true" selection-start-line="47" selection-start-column="74" selection-end-line="47" selection-end-column="74" />
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="515" column="16" lean-forward="true" selection-start-line="515" selection-start-column="16" selection-end-line="515" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#2711#6112#0" expanded="false" />
+            <element signature="e#6156#10111#0" expanded="false" />
+            <element signature="e#10140#11480#0" expanded="false" />
+            <element signature="e#11520#13395#0" expanded="false" />
+            <element signature="e#13443#15095#0" expanded="false" />
+            <element signature="e#15481#16198#0" expanded="false" />
+            <element signature="e#17949#18157#0" expanded="false" />
+            <element signature="e#18193#19307#0" expanded="false" />
+            <element signature="e#19358#20009#0" expanded="false" />
+            <element signature="e#20045#20377#0" expanded="false" />
+            <element signature="e#20418#20929#0" expanded="false" />
+            <element signature="e#20971#21220#0" expanded="false" />
+            <element signature="e#21264#22369#0" expanded="false" />
+            <element signature="e#23546#25742#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/scp31197/home/toolnuoi.com/source/app/Http/Controllers/Api/CloneController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="30" column="21" lean-forward="false" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat-local.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="44" column="29" lean-forward="true" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

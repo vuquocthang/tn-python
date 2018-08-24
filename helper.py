@@ -492,7 +492,10 @@ def newest_message(driver):
 
                 print(message)
 
-                send_message(driver, link, message)
+                if message is not False:
+                    send_message(driver, link, message)
+                else:
+                    print("Message not has keyword")
             except Exception as e:
                 print(e)
     except Exception as e:
@@ -510,7 +513,7 @@ def get_message_from_keyword(type, keyword, name):
         if keyword.lower() in k['key'].lower():
             return k['value'].replace("[name]", name)
 
-    return 'Xin chào ' + name
+    return False
 
 
 def get_random_schedule_message_from_server(type, name):

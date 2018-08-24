@@ -45,7 +45,7 @@ while True:
                         driver.quit()
                         break
 
-                    print("Driver is None: {}".format(driver is None))    
+                    print("Driver is None: {}".format(driver is None))
 
                     # files
                     files = schedule['post']['files']
