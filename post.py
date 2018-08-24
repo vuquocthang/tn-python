@@ -51,8 +51,11 @@ while True:
                     # files
                     files = []
 
+
+
                     try:
-                        files = schedule['post']['files']
+                        if schedule['post']['files'] is not None:
+                            files = schedule['post']['files']
                     except Exception as e:
                         print("File ex : ".format(e))
 
