@@ -553,9 +553,10 @@ def request_message(driver):
 
                 message = get_message_from_keyword('message', recipient_message, recipient_name)
 
-                # print(message)
+                print(message)
 
-                send_message(driver, link, message)
+                if message is not None:
+                    send_message(driver, link, message)
             except Exception as e:
                 print(e)
 

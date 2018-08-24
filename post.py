@@ -50,7 +50,7 @@ while True:
 
                     # files
                     files = schedule['post']['files']
-                    
+
                     # image path
                     imagepaths = []
 
