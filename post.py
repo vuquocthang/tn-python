@@ -51,6 +51,8 @@ while True:
                     # files
                     files = schedule['post']['files']
 
+                    print("Files : ".format(files))
+
                     # image path
                     imagepaths = []
 
