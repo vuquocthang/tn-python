@@ -72,7 +72,7 @@ while True:
                     driver.quit()
 
                 except Exception as e:
-                    print(" Exception init : {}".format(e))
+                    print("Exception init : {}".format(e))
 
                     driver.save_screenshot(
                         os.path.join(logging_path, 'post-exception-{}.{}'.format(clone['c_user'], 'png'))
