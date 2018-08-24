@@ -70,6 +70,7 @@ def work():
                 driver.quit()
             finally:
                 driver.quit()
+                print("Done")
 
 
             display.stop()

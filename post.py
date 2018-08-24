@@ -1,15 +1,14 @@
 import helper
 import requests
-from pyvirtualdisplay import Display
-from xvfbwrapper import Xvfb
 import time
 import datetime
 import logging
-import sys, os
+import os
 import myutil.init
+from pyvirtualdisplay import Display
+from xvfbwrapper import Xvfb
 
 logging.basicConfig(filename='post.log',level=logging.DEBUG)
-
 url = "http://toolnuoi999.tk"
 image_path = "/home/toolnuoi999.tk/source/storage/app/post"
 logging_path = os.path.join( os.path.dirname(os.path.abspath(__file__)), 'image-post-logging')
@@ -56,6 +55,8 @@ while True:
                     for file in files:
                         imagepaths.append("{}/{}".format(image_path, file['filename']))
 
+                    print("Image paths : {}".format(imagepaths))
+
                     # post
                     helper.post_status(driver, schedule['post']['text'], imagepaths)
 
@@ -68,7 +69,6 @@ while True:
                     requests.post("{}/api/schedule/performed".format(url), {
                         'post_cat_schedule_id': schedule['id']
                     })
-
                     driver.quit()
 
                 except Exception as e:
@@ -77,9 +77,6 @@ while True:
                     driver.save_screenshot(
                         os.path.join(logging_path, 'post-exception-{}.{}'.format(clone['c_user'], 'png'))
                     )
-
-                    print(driver)
-
                     driver.quit()
                 finally:
                     print("Done")
