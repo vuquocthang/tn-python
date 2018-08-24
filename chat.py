@@ -6,6 +6,7 @@ import time
 import os
 from xvfbwrapper import Xvfb
 from pyvirtualdisplay import Display
+import myutil.init
 
 
 url = "http://toolnuoi999.tk"
@@ -42,7 +43,7 @@ def work():
             driver = None
 
             try:
-                driver = helper._init(clone['ip'], clone['port'], clone['c_user'], clone['xs'])
+                driver = myutil.init._init(clone['ip'], clone['port'], clone['c_user'], clone['xs'])
                 helper.newest_message(driver)
                 helper.request_message(driver)
 
