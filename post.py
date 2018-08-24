@@ -39,6 +39,8 @@ while True:
                     driver = myutil.init._init(clone['ip'], clone['port'], clone['c_user'], clone['xs'])
                     check = myutil.init._is_checkpoint(driver, clone)
 
+                    print("Check checkpoint : {}".format(check))
+
                     if check is False:
                         print("Clone is checkpoint")
                         driver.quit()
