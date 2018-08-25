@@ -29,7 +29,6 @@ def add_friend():
     if request.method == 'POST':
         clone = json.loads(request.form['clone'])
         print(clone)
-
         ip = clone['ip']
         port = clone['port']
         c_user = clone['c_user']
