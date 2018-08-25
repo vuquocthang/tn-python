@@ -510,6 +510,8 @@ def get_message_from_keyword(type, message, name):
     }).json()
 
     for k in keywords_from_server:
+        print(k['key'].lower())
+        print(message.lower())
         if k['key'].lower() in message.lower():
             return k['value'].replace("[name]", name)
 
