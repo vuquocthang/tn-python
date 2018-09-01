@@ -662,6 +662,55 @@ def happy_birthday(driver, message):
         time.sleep(5)
     '''
 
+def happy_birthday2(driver):
+    driver.get("https://m.facebook.com/events/birthdays")
+    events_card_list = driver.find_elements_by_xpath("//*[@id='events_card_list']//ul[1]/div")
+
+    '''
+    for index, val in enumerate(events_card_list):
+        print(index)
+
+        try:
+            driver.get("https://m.facebook.com/events/birthdays")
+            #events_card_list = driver.find_elements_by_xpath("//*[@id='events_card_list']//ul[1]/div")
+            driver.find_elements_by_xpath("//*[@id='events_card_list']//ul[1]/div")[index].find_element_by_name("message").send_keys("Happy birthday !")
+            time.sleep(3)
+            driver.find_elements_by_xpath("//*[@id='events_card_list']//ul[1]/div")[index].find_element_by_xpath("//input[@type='submit'][1]").click()
+            time.sleep(5)
+        except Exception as e:
+            print(e)
+    '''
+
+    links_and_names = []
+
+    for item in events_card_list:
+        try:
+            #links.append(item.find_elements_by_tag_name("a")[0].get_attribute("href") )
+            name = item.find_elements_by_tag_name("a")[0].find_elements_by_tag_name("div")[0].find_elements_by_tag_name("div")[0].text
+
+            tmp = {
+                'link' : item.find_elements_by_tag_name("a")[0].get_attribute("href"),
+                'name' : name
+            }
+
+            links_and_names.append(tmp)
+
+        except Exception as e:
+            print(e)
+
+
+    print(links_and_names)
+
+    for item in links_and_names:
+        print(item)
+        try:
+            driver.get(item['link'])
+            driver.find_element_by_name("xc_message").send_keys("Happy birthday " + item["name"])
+            driver.find_element_by_name("view_post").click()
+        except Exception as e:
+            print("Post ex : {}".format(e))
+
+
 
 def get_friends(driver):
     driver.get("")
@@ -870,3 +919,45 @@ def rep_comment(driver, uid):
 
 
             # return len(post_items[:10])
+
+
+def rep_comment_on_mobile(driver, uid):
+    driver.get("https://m.facebook.com/{}".format(uid))
+    articles = driver.find_elements_by_xpath("//div[@id='structured_composer_async_container']//div//div")
+
+    comment_links = []
+
+    for article in articles[:10]:
+        link = article.find_element_by_xpath("//a[contains(@href, 'story.php')]")
+        comment_links.append(link.get_attribute("href"))
+
+    print(comment_links)
+
+
+    driver.get(comment_links[0])
+    comment_items = driver.find_elements_by_xpath("//div[@id='m_story_permalink_view']/div[2]/div[1]/div[4]/div")
+
+    comments_and_rep_links = []
+
+    for item in comment_items:
+        #print(item.text)
+        #print(item.get_attribute('id'))
+
+        comment = driver.find_element_by_xpath("//div/div[1]").text
+        print(comment)
+
+        rep_link = item.find_element_by_xpath("//a[contains(@href, '/comment/reply')][1]").get_attribute("href")
+
+        print(rep_link)
+
+        comments_and_rep_links.append({
+            'comment' : comment,
+            'rep_link' : rep_link
+        })
+
+
+
+    for item in comments_and_rep_links:
+        driver.get(item['rep_link'])
+        driver.find_element_by_id("composerInput").send_keys("Thanks")
+        driver.find_element_by_xpath("//*[@type='submit']").click()

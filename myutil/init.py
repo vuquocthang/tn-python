@@ -74,8 +74,8 @@ def _init_with_useragent(ip, port, c_user, xs, useragent):
     driver = webdriver.Firefox(firefox_options=options, firefox_profile=fp, capabilities=firefox_capabilities)
 
     try:
-        username = "hohzaipa"
-        password = "Em4q6QYK"
+        username = "jaejohdi"
+        password = "YqQhmDd8"
         driver.execute_script("window.scrollTo(0, 2000)")
         driver.save_screenshot("login-proxy.png")
 
@@ -220,8 +220,8 @@ def _init_with_extension(ip, port):
 
     driver = webdriver.Firefox(firefox_options=options, firefox_profile=fp, capabilities=firefox_capabilities)
 
-    username = "hohzaipa"
-    password = "Em4q6QYK"
+    username = "jaejohdi"
+    password = "YqQhmDd8"
 
 
     count = 0

@@ -39,7 +39,8 @@ for clone in live_clones:
             #vdisplay.stop()
 
         driver.save_screenshot('happybirthday-begin-{}.{}'.format(c_user.strip(), 'png'))
-        helper.happy_birthday(driver, "Chúc mừng sinh nhật !")
+        #helper.happy_birthday(driver, "Chúc mừng sinh nhật !")
+        helper.happy_birthday2(driver)
     except Exception as e:
         print(e)
     #finally:

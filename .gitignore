@@ -2,6 +2,7 @@ test.py
 __pycache__/
 post.log
 chat.log
+happybirthday.log
 geckodriver.log
 image-post-logging/
 image-chat-logging/
