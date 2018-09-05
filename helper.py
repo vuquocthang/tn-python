@@ -490,9 +490,10 @@ def newest_message(driver):
 
                 message = get_message_from_keyword('message', recipient_message, recipient_name)
 
-                print(message)
+                #print(message)
 
                 if message is not False:
+                    print(message)
                     send_message(driver, link, message)
                 else:
                     print("Message not has keyword")
@@ -510,8 +511,8 @@ def get_message_from_keyword(type, message, name):
     }).json()
 
     for k in keywords_from_server:
-        print(k['key'].lower())
-        print(message.lower())
+        #print(k['key'].lower())
+        #print(message.lower())
         if k['key'].lower() in message.lower():
             return k['value'].replace("[name]", name)
 
@@ -555,10 +556,12 @@ def request_message(driver):
 
                 message = get_message_from_keyword('message', recipient_message, recipient_name)
 
-                print(message)
+                #print(message)
 
                 if message is not False:
                     send_message(driver, link, message)
+                else:
+                    print("Message not has keyword")
             except Exception as e:
                 print(e)
 
@@ -666,21 +669,6 @@ def happy_birthday2(driver):
     driver.get("https://m.facebook.com/events/birthdays")
     events_card_list = driver.find_elements_by_xpath("//*[@id='events_card_list']//ul[1]/div")
 
-    '''
-    for index, val in enumerate(events_card_list):
-        print(index)
-
-        try:
-            driver.get("https://m.facebook.com/events/birthdays")
-            #events_card_list = driver.find_elements_by_xpath("//*[@id='events_card_list']//ul[1]/div")
-            driver.find_elements_by_xpath("//*[@id='events_card_list']//ul[1]/div")[index].find_element_by_name("message").send_keys("Happy birthday !")
-            time.sleep(3)
-            driver.find_elements_by_xpath("//*[@id='events_card_list']//ul[1]/div")[index].find_element_by_xpath("//input[@type='submit'][1]").click()
-            time.sleep(5)
-        except Exception as e:
-            print(e)
-    '''
-
     links_and_names = []
 
     for item in events_card_list:
@@ -705,7 +693,10 @@ def happy_birthday2(driver):
         print(item)
         try:
             driver.get(item['link'])
-            driver.find_element_by_name("xc_message").send_keys("Happy birthday " + item["name"])
+
+            message = get_random_schedule_message_from_server('birthday', item['name'])
+
+            driver.find_element_by_name("xc_message").send_keys(message)
             driver.find_element_by_name("view_post").click()
         except Exception as e:
             print("Post ex : {}".format(e))

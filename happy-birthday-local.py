@@ -5,6 +5,7 @@ import os
 import myutil.init
 #from xvfbwrapper import Xvfb
 #from pyvirtualdisplay import Display
+import myutil.log as mylog
 
 url = "http://toolnuoi999.tk"
 logging_path = os.path.join( os.path.dirname(os.path.abspath(__file__)), 'image-happy-birthday')
@@ -13,6 +14,8 @@ logging.basicConfig(filename='happybirthday.log',level=logging.DEBUG)
 logging.info("Logging path : {}".format(logging_path))
 
 live_clones = requests.get("{}/api/clones/Live".format(url)).json()
+
+mylog.save("happybirthday", "Begin happy birthday !")
 
 for clone in live_clones:
     '''

@@ -7,6 +7,7 @@ import os
 from xvfbwrapper import Xvfb
 from pyvirtualdisplay import Display
 import myutil.init
+import myutil.log as mylog
 
 
 url = "http://toolnuoi999.tk"
@@ -31,9 +32,7 @@ def work():
             if clone is None:
                 break
 
-            print(clone)
-
-            logging.info("Start clone : {}".format(clone['uid']))
+            mylog.save("chat", clone)
 
             vdisplay = Xvfb()
             vdisplay.start()
@@ -50,7 +49,8 @@ def work():
                 if check is False:
                     print("Clone is checkpoint")
                     driver.quit()
-                    break
+                    #break
+
 
                 helper.newest_message(driver)
                 helper.request_message(driver)

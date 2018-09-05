@@ -2,15 +2,10 @@ import helper
 import requests
 import threading
 import time
-import os
-import logging
 import myutil.init
+import myutil.log as mylog
 
 url = "http://toolnuoi999.tk"
-logging_path = os.path.join( os.path.dirname(os.path.abspath(__file__)), 'image-chat-logging')
-logging.basicConfig(filename='chat.log',level=logging.DEBUG)
-
-#logging.info("Logging path : {}".format(logging_path))
 
 NUM_WORKERS = 1
 
@@ -24,22 +19,30 @@ def work():
     while True:
         try:
             clone = requests.get("{}/api/clone/Live".format(url)).json()
-
             if clone is None:
                 break
-
-            print(clone)
+            mylog.save("chat", str(clone['uid']))
             driver = None
 
             try:
                 driver = myutil.init._init(clone['ip'], clone['port'], clone['c_user'], clone['xs'])
-                helper.newest_message(driver)
-                helper.request_message(driver)
+                check = myutil.init._is_checkpoint(driver, clone)
 
-                #active_user_links = helper.active_conversations(driver)
-                #helper.message_to_active_users(driver, active_user_links)
+                if check is False:
+                    print("Clone is checkpoint")
+                    mylog.save("chat", "Clone is checkpoint")
+                    driver.quit()
+                    #break
+                else:
+                    helper.newest_message(driver)
+                    helper.request_message(driver)
+
+                    #active_user_links = helper.active_conversations(driver)
+                    #helper.message_to_active_users(driver, active_user_links)
             except Exception as e:
                 print("Exception : {}".format(e))
+                mylog.save("chat", str(e))
+
                 driver.quit()
             finally:
                 driver.quit()
@@ -48,5 +51,6 @@ def work():
             print(e)
 
         time.sleep(5)
+
 create_workers()
 

@@ -5,14 +5,18 @@ import os
 import myutil.init
 from xvfbwrapper import Xvfb
 from pyvirtualdisplay import Display
+import myutil.log as mylog
 
 url = "http://toolnuoi999.tk"
-logging_path = os.path.join( os.path.dirname(os.path.abspath(__file__)), 'image-happy-birthday')
-logging.basicConfig(filename='happybirthday.log',level=logging.DEBUG)
 
-logging.info("Logging path : {}".format(logging_path))
+#logging_path = os.path.join( os.path.dirname(os.path.abspath(__file__)), 'image-happy-birthday')
+#logging.basicConfig(filename='happybirthday.log',level=logging.DEBUG)
+
+#logging.info("Logging path : {}".format(logging_path))
 
 live_clones = requests.get("{}/api/clones/Live".format(url)).json()
+
+mylog.save("happybirthday", "Begin happy birthday !")
 
 for clone in live_clones:
     vdisplay = Xvfb()
@@ -36,10 +40,13 @@ for clone in live_clones:
             display.stop()
             vdisplay.stop()
 
-        driver.save_screenshot('happybirthday-begin-{}.{}'.format(c_user.strip(), 'png'))
-        helper.happy_birthday(driver, "Chúc mừng sinh nhật !")
+        #driver.save_screenshot('happybirthday-begin-{}.{}'.format(c_user.strip(), 'png'))
+        #helper.happy_birthday(driver, "Chúc mừng sinh nhật !")
+        helper.happy_birthday2(driver)
+        mylog.save("happybirthday", "happy birthday {} done ".format(c_user) )
     except Exception as e:
         print(e)
+        mylog.save("happybirthday", "happy birthday ex : {}".format(e))
     finally:
         driver.quit()
         display.stop()
