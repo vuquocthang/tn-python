@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca71d365-ca32-4f4b-904a-838adb97c3b2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myutil/log.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myutil/message.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/restart-chat.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/init.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat-local.py" afterPath="$PROJECT_DIR$/chat-local.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat.py" afterPath="$PROJECT_DIR$/chat.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/happy-birthday-local.py" afterPath="$PROJECT_DIR$/happy-birthday-local.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/happy-birthday.py" afterPath="$PROJECT_DIR$/happy-birthday.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helper.py" afterPath="$PROJECT_DIR$/helper.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -93,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chat.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="chat.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="34" column="33" lean-forward="false" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="37" />
+            <state relative-caret-position="-314">
+              <caret line="34" column="34" lean-forward="false" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -141,7 +132,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="restart-chat.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="restart-chat.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/restart-chat.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -226,7 +217,6 @@
         <option value="$PROJECT_DIR$/rep-comment-local.py" />
         <option value="$PROJECT_DIR$/myutil/init.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/chat.py" />
         <option value="$PROJECT_DIR$/chat-local.py" />
         <option value="$PROJECT_DIR$/myutil/message.py" />
         <option value="$PROJECT_DIR$/myutil/test.py" />
@@ -235,6 +225,7 @@
         <option value="$PROJECT_DIR$/myutil/log.py" />
         <option value="$PROJECT_DIR$/happy-birthday.py" />
         <option value="$PROJECT_DIR$/restart-chat.py" />
+        <option value="$PROJECT_DIR$/chat.py" />
       </list>
     </option>
   </component>
@@ -677,16 +668,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="34" column="33" lean-forward="false" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myutil/init.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -756,6 +737,16 @@
         <state relative-caret-position="0">
           <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-314">
+          <caret line="34" column="34" lean-forward="false" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

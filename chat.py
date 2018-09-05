@@ -32,7 +32,7 @@ def work():
             if clone is None:
                 break
 
-            mylog.save("chat", clone)
+            mylog.save("chat", "{}".format(clone))
 
             vdisplay = Xvfb()
             vdisplay.start()
