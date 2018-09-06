@@ -914,41 +914,48 @@ def rep_comment(driver, uid):
 
 def rep_comment_on_mobile(driver, uid):
     driver.get("https://m.facebook.com/{}".format(uid))
-    articles = driver.find_elements_by_xpath("//div[@id='structured_composer_async_container']//div//div")
+    articles = driver.find_elements_by_xpath("//div[@id='structured_composer_async_container']/div[1]/div")
 
     comment_links = []
 
-    for article in articles[:10]:
-        link = article.find_element_by_xpath("//a[contains(@href, 'story.php')]")
-        comment_links.append(link.get_attribute("href"))
-
-    print(comment_links)
-
-
-    driver.get(comment_links[0])
-    comment_items = driver.find_elements_by_xpath("//div[@id='m_story_permalink_view']/div[2]/div[1]/div[4]/div")
-
-    comments_and_rep_links = []
-
-    for item in comment_items:
-        #print(item.text)
-        #print(item.get_attribute('id'))
-
-        comment = driver.find_element_by_xpath("//div/div[1]").text
-        print(comment)
-
-        rep_link = item.find_element_by_xpath("//a[contains(@href, '/comment/reply')][1]").get_attribute("href")
-
-        print(rep_link)
-
-        comments_and_rep_links.append({
-            'comment' : comment,
-            'rep_link' : rep_link
-        })
+    for index, article in enumerate(articles):
+        try:
+            link = driver.find_element_by_xpath("//div[@id='structured_composer_async_container']/div[1]/div[{}]//a[contains(@href, 'story.php')]".format(index + 1)).get_attribute("href")
+            comment_links.append( link )
+            print( link )
+        except Exception as e:
+            link = driver.find_element_by_xpath(
+                "//div[@id='structured_composer_async_container']/div[1]/div[{}]//a[contains(@href, 'photo.php')]".format(
+                    index + 1)).get_attribute("href")
+            comment_links.append(link)
+            print(link)
+            print(e)
 
 
+    for link in comment_links:
+        try:
+            print(link)
+            driver.get(link)
+            comment_items = driver.find_elements_by_xpath("//div[@id='m_story_permalink_view']/div[2]/div[1]/div[4]/div")
 
-    for item in comments_and_rep_links:
-        driver.get(item['rep_link'])
-        driver.find_element_by_id("composerInput").send_keys("Thanks")
-        driver.find_element_by_xpath("//*[@type='submit']").click()
+
+            print("comments : {}".format(len(comment_items)))
+
+            for index, item in enumerate(comment_items):
+                try:
+                    driver.get(link)
+                    comment = driver.find_element_by_xpath("//div[@id='m_story_permalink_view']/div[2]/div[1]/div[4]/div[{}]".format(index + 1)).text
+
+                    print(comment)
+
+                    if ('You replied' not in comment) and ('Bạn đã trả lời' not in comment ) and ('Bạn đã phản hồi' not in comment):
+                        message = get_message_from_keyword("comment", comment, "")
+
+                        if message is not False:
+                            driver.find_element_by_xpath("//div[@id='m_story_permalink_view']/div[2]/div[1]/div[4]/div[{}]/div[1]/div[3]/a[1]".format(index + 1)).click()
+                            driver.find_element_by_id("composerInput").send_keys(message)
+                            driver.find_element_by_xpath("//*[@type='submit']").click()
+                except Exception as e:
+                    print(e)
+        except Exception as e:
+            print(e)
