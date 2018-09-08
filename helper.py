@@ -14,7 +14,7 @@ from selenium.webdriver.common.proxy import Proxy, ProxyType
 from selenium.webdriver.common.keys import Keys
 import json
 from selenium.webdriver.firefox.firefox_profile import AddonFormatError
-
+import env
 
 class FirefoxProfileWithWebExtensionSupport(webdriver.FirefoxProfile):
     def _addon_details(self, addon_path):
@@ -49,6 +49,8 @@ useragents = [
     "Mozilla/5.0 (Linux; U; Android 7.0; en-US; SM-G935F Build/NRD90M) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 UCBrowser/11.3.8.976 U3/0.8.0 Mobile Safari/534.30"
 ]
 
+def get_api_key():
+    return env.KEY['API']
 
 def _init_with_useragent(ip, port, c_user, xs, useragent):
     firefox_capabilities = DesiredCapabilities.FIREFOX.copy()
@@ -507,7 +509,8 @@ def newest_message(driver):
 
 def get_message_from_keyword(type, message, name):
     keywords_from_server = requests.post('{}/api/keywords'.format(url), {
-        'type': type
+        'type': type,
+        'api_key': get_api_key()
     }).json()
 
     for k in keywords_from_server:
@@ -521,7 +524,8 @@ def get_message_from_keyword(type, message, name):
 
 def get_random_schedule_message_from_server(type, name):
     messages_from_server = requests.post('{}/api/keywords'.format(url), {
-        'type': type
+        'type': type,
+        'api_key': get_api_key()
     }).json()
 
     message = random.choice(messages_from_server)

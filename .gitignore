@@ -12,3 +12,4 @@ login-proxy.png
 *.png
 *.jpg
 *.log
+env.py

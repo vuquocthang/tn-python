@@ -24,7 +24,9 @@ def create_workers():
 def work():
     while True:
         try:
-            clone = requests.get("{}/api/clone/Live".format(url)).json()
+            clone = requests.get("{}/api/clone/Live".format(url),{
+                'api_key' : helper.get_api_key()
+            }).json()
 
             if clone is None:
                 break

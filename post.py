@@ -14,7 +14,9 @@ image_path = "/home/toolnuoi999.tk/source/storage/app/post"
 logging_path = os.path.join( os.path.dirname(os.path.abspath(__file__)), 'image-post-logging')
 
 while True:
-    schedules = requests.get("{}/api/schedule".format(url)).json()
+    schedules = requests.get("{}/api/schedule".format(url),{
+                'api_key' : helper.get_api_key()
+            }).json()
 
     now = datetime.datetime.now()
 
@@ -70,7 +72,8 @@ while True:
                     )
 
                     requests.post("{}/api/schedule/performed".format(url), {
-                        'post_cat_schedule_id': schedule['id']
+                        'post_cat_schedule_id': schedule['id'],
+                        'api_key': helper.get_api_key()
                     })
                     driver.quit()
 

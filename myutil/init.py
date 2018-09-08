@@ -15,6 +15,7 @@ from selenium.webdriver.common.keys import Keys
 import json
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.firefox.firefox_profile import AddonFormatError
+import helper
 
 class FirefoxProfileWithWebExtensionSupport(webdriver.FirefoxProfile):
     def _addon_details(self, addon_path):
@@ -389,6 +390,7 @@ def _is_checkpoint(driver, clone):
 
 def _update_clone_status(clone, status):
     requests.put("{}/api/clone/{}".format(url, clone['id']) , {
-        'status' : status
+        'status' : status,
+        'api_key': helper.get_api_key()
     })
 

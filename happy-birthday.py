@@ -14,7 +14,9 @@ url = "http://toolnuoi999.tk"
 
 #logging.info("Logging path : {}".format(logging_path))
 
-live_clones = requests.get("{}/api/clones/Live".format(url)).json()
+live_clones = requests.get("{}/api/clones/Live".format(url),{
+                'api_key' : helper.get_api_key()
+            }).json()
 
 mylog.save("happybirthday", "Begin happy birthday !")
 
