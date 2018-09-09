@@ -48,6 +48,34 @@ useragents = [
     "Mozilla/5.0 (Linux; U; Android 7.0; en-US; SM-G935F Build/NRD90M) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 UCBrowser/11.3.8.976 U3/0.8.0 Mobile Safari/534.30"
 ]
 
+
+def _init0():
+    firefox_capabilities = DesiredCapabilities.FIREFOX.copy()
+    firefox_capabilities['acceptInsecureCerts'] = True
+    firefox_capabilities['marionette'] = True
+    firefox_capabilities['binary'] = '/usr/local/bin/geckodriver'
+    firefox_capabilities['acceptUntrustedCertificates'] = True
+    firefox_capabilities['assumeUntrustedCertificateIssuer'] = True
+    firefox_capabilities['acceptNextAlert'] = True
+
+    fp = FirefoxProfileWithWebExtensionSupport()
+    fp.accept_untrusted_certs = True
+    fp.assume_untrusted_cert_issuer = True
+    fp.accept_next_alert = True
+    #fp.set_preference('permissions.default.image', 2)
+    fp.set_preference('dom.ipc.plugins.enabled.libflashplayer.so', 'false')
+    #fp.set_preference("general.useragent.override", useragent)
+
+    #extension_path = "foxyproxy@eric.h.jung.xpi"
+    #fp.add_extension(extension_path)
+    fp.update_preferences()
+
+    options = Options()
+    # options.add_argument("--headless")
+
+    driver = webdriver.Firefox(firefox_options=options, firefox_profile=fp, capabilities=firefox_capabilities)
+    return driver
+
 def _init_with_useragent(ip, port, c_user, xs, useragent):
     firefox_capabilities = DesiredCapabilities.FIREFOX.copy()
     firefox_capabilities['acceptInsecureCerts'] = True

@@ -1,26 +1,61 @@
 import helper
 import requests
+import threading
 import time
-import datetime
-import logging
-import sys, os
 import myutil.init
-
-'''
-
-logging.basicConfig(filename='post.log',level=logging.DEBUG)
+import myutil.log as mylog
 
 
-c_user = "100013630568585"
-xs = "23%3Al22zV0krm2j-og%3A2%3A1535095915%3A17613%3A6145"
-ip = "109.248.222.168"
-port = "33423"
+url = "http://toolnuoi999.tk"
 
-driver = myutil.init._init(ip, port, c_user, xs)
-helper.rep_comment_on_mobile(driver, c_user)
-'''
 
-import env
+NUM_WORKERS = 1
 
-print(env.KEY['API'])
-print(helper.get_api_key())
+def create_workers():
+    for x in range(NUM_WORKERS):
+        t = threading.Thread(target=work)
+        #t.daemon = True
+        t.start()
+
+def work():
+    while True:
+        try:
+            clone = requests.get("{}/api/clone/Live".format(url),{
+                'api_key' : helper.get_api_key()
+            }).json()
+
+            if clone is None:
+                break
+
+            mylog.save("comment", "{}".format(clone))
+
+
+            driver = None
+
+            try:
+                driver = myutil.init._init(clone['ip'], clone['port'], clone['c_user'], clone['xs'])
+                print(clone['ip'])
+                print(clone['port'])
+
+                check = myutil.init._is_checkpoint(driver, clone)
+
+                if check is False:
+                    print("Clone is checkpoint")
+                    driver.quit()
+                    #break
+                helper.rep_comment_on_mobile(driver, clone['c_user'])
+
+
+            except Exception as e:
+                print("Exception : {}".format(e))
+                driver.quit()
+            finally:
+                driver.quit()
+                print("Done")
+
+        except Exception as e:
+            print(e)
+
+        time.sleep(5)
+create_workers()
+

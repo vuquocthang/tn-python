@@ -13,3 +13,4 @@ login-proxy.png
 *.jpg
 *.log
 env.py
+accept-transactions.py

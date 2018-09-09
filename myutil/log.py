@@ -7,13 +7,16 @@ api_url = "http://toolnuoi999.tk"
 #params
 # chanel = { 'chat', 'post', 'happybirthday' }
 # content : string
+import helper
+
 def save(channel, content):
     try:
         url = "{}/api/log".format(api_url)
 
         requests.post(url, {
             'type'      : channel,
-            'content'   : content
+            'content'   : content,
+            'api_key'   : helper.get_api_key()
         })
     except Exception as e:
         return e

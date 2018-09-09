@@ -12,9 +12,9 @@ import myutil.log as mylog
 
 url = "http://toolnuoi999.tk"
 logging_path = os.path.join( os.path.dirname(os.path.abspath(__file__)), 'image-chat-logging')
-logging.basicConfig(filename='chat.log',level=logging.DEBUG)
+#logging.basicConfig(filename='chat.log',level=logging.DEBUG)
 
-logging.info("Logging path : {}".format(logging_path))
+#logging.info("Logging path : {}".format(logging_path))
 
 NUM_WORKERS = 1
 

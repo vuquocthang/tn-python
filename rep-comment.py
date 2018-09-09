@@ -42,6 +42,8 @@ def work():
 
             try:
                 driver = myutil.init._init(clone['ip'], clone['port'], clone['c_user'], clone['xs'])
+                print(clone['ip'])
+                print(clone['port'])
 
                 check = myutil.init._is_checkpoint(driver, clone)
 

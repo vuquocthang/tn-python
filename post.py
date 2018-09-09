@@ -7,8 +7,9 @@ import os
 import myutil.init
 from pyvirtualdisplay import Display
 from xvfbwrapper import Xvfb
+import myutil.log as mylog
 
-logging.basicConfig(filename='post.log',level=logging.DEBUG)
+#logging.basicConfig(filename='post.log',level=logging.DEBUG)
 url = "http://toolnuoi999.tk"
 image_path = "/home/toolnuoi999.tk/source/storage/app/post"
 logging_path = os.path.join( os.path.dirname(os.path.abspath(__file__)), 'image-post-logging')
@@ -24,11 +25,12 @@ while True:
         if (str(now.hour) == str(schedule['hour'])):
 
             print(" Hour : {}".format(now.hour))
-            logging.info("Perform schedule : {}".format(schedule['id']))
+            #logging.info("Perform schedule : {}".format(schedule['id']))
 
             clones = schedule['clones']
 
             for clone in clones:
+                mylog.save("post", "Clone uid : {}".format(clone['c_user']))
                 driver = None
 
                 # init driver
@@ -66,6 +68,7 @@ while True:
 
                     # success
                     print("Post status successfully")
+                    mylog.save("post", "Post clone uid {} successfully".format(clone['c_user']))
 
                     driver.save_screenshot(
                         os.path.join(logging_path, 'post-success-{}.{}'.format(clone['c_user'], 'png'))
@@ -79,6 +82,7 @@ while True:
 
                 except Exception as e:
                     print("Exception init : {}".format(e))
+                    mylog.save("post", "Post ex : {}".format(e))
 
                     driver.save_screenshot(
                         os.path.join(logging_path, 'post-exception-{}.{}'.format(clone['c_user'], 'png'))
