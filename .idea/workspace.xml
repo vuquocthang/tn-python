@@ -2,51 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca71d365-ca32-4f4b-904a-838adb97c3b2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.env" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/message.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/add-friend-to-group.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chat-local.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chat.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/env.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/extensions/foxyproxy@eric.h.jung.xpi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/foxyproxy@eric.h.jung.xpi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/happy-birthday-local.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/happy-birthday.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/helper.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/inbox.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/local-test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/manifest.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myutil/__ init __.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myutil/foxyproxy@eric.h.jung.xpi" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myutil/init.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myutil/log.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myutil/manifest.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myutil/message.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myutil/test-linux.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/phantom.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/post-local.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/post.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/react.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rep-comment-local.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rep-comment.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/restart-chat.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/restart-comment.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/restartcore.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server-local.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/server.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/get-message.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/getschedule.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test2.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_extensions.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_post2.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_post_status.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_save_screenshot_to_path.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
