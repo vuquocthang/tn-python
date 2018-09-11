@@ -61,7 +61,8 @@ def add_friend():
                     # post to server
                     requests.post("{}/{}".format(api_url, "addfriend"), {
                         'clone_id': clone['id'],
-                        'uid': uid['uid']
+                        'uid': uid['uid'],
+                        'api_key' : helper.get_api_key()
                     })
 
                     driver.save_screenshot('adddone-{}-{}.{}'.format(uid['uid'].strip(), c_user.strip(), 'png'))
@@ -72,7 +73,8 @@ def add_friend():
                     # post to server
                     requests.post("{}/{}".format(api_url, "addfriend"), {
                         'clone_id': clone['id'],
-                        'uid': uid['uid']
+                        'uid': uid['uid'],
+                        'api_key' : helper.get_api_key()
                     })
 
                     print(e)
