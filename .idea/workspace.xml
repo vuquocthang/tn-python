@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca71d365-ca32-4f4b-904a-838adb97c3b2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vipuser/foxyproxy@eric.h.jung.xpi" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vipuser/chat.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vipuser/comment.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vipuser/vip_user_helper.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.py" afterPath="$PROJECT_DIR$/server.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,9 +20,10 @@
       <file leaf-file-name="helper.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/helper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="43" />
+            <state relative-caret-position="190">
+              <caret line="535" column="0" lean-forward="false" selection-start-line="535" selection-start-column="0" selection-end-line="576" selection-end-column="0" />
               <folding>
+                <element signature="e#0#30#0" expanded="true" />
                 <element signature="e#2766#6167#0" expanded="false" />
                 <element signature="e#6211#10166#0" expanded="false" />
                 <element signature="e#10195#11535#0" expanded="false" />
@@ -27,6 +31,9 @@
                 <element signature="e#13498#15150#0" expanded="false" />
                 <element signature="e#15536#16253#0" expanded="false" />
                 <element signature="e#16459#17658#0" expanded="false" />
+                <element signature="e#17716#18075#0" expanded="false" />
+                <element signature="e#18139#18381#0" expanded="false" />
+                <element signature="e#18417#19650#0" expanded="false" />
                 <element signature="e#19701#20352#0" expanded="false" />
                 <element signature="e#20388#20720#0" expanded="false" />
                 <element signature="e#20761#21272#0" expanded="false" />
@@ -42,8 +49,8 @@
       <file leaf-file-name="chat.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+            <state relative-caret-position="340">
+              <caret line="56" column="37" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -51,36 +58,70 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="restartcore.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restartcore.py">
+      <file leaf-file-name="vip_user_helper.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vipuser/vip_user_helper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#17#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
-              <caret line="64" column="56" lean-forward="false" selection-start-line="64" selection-start-column="56" selection-end-line="64" selection-end-column="56" />
+            <state relative-caret-position="1224">
+              <caret line="72" column="59" lean-forward="false" selection-start-line="72" selection-start-column="59" selection-end-line="72" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/post.py">
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vipuser/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1037">
-              <caret line="70" column="96" lean-forward="false" selection-start-line="70" selection-start-column="96" selection-end-line="70" selection-end-column="96" />
+            <state relative-caret-position="85">
+              <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="env.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/env.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chat.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vipuser/chat.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-51">
+              <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="init.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/myutil/init.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="89">
+              <caret line="185" column="43" lean-forward="false" selection-start-line="185" selection-start-column="43" selection-end-line="185" selection-end-column="43" />
+              <folding>
+                <element signature="e#3835#7236#0" expanded="false" />
+                <element signature="e#7287#8519#0" expanded="false" />
+                <element signature="e#8561#11701#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comment.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vipuser/comment.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -98,6 +139,7 @@
     <findStrings>
       <find>read</find>
       <find>happy</find>
+      <find>newest_message</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -106,14 +148,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/post3.py" />
-        <option value="$USER_HOME$/AppData/Local/Temp/scp50522/home/hoso.tk/python/index.py" />
-        <option value="$USER_HOME$/AppData/Local/Temp/scp12016/home/hoso.tk/python/server.py" />
-        <option value="$PROJECT_DIR$/post5.py" />
-        <option value="$PROJECT_DIR$/manifest.json" />
-        <option value="$USER_HOME$/AppData/Local/Temp/scp05145/home/toolnuoi999.tk/python/helper.py" />
-        <option value="$USER_HOME$/AppData/Local/Temp/scp14897/home/toolnuoi.com/python/test_extensions.py" />
-        <option value="$USER_HOME$/AppData/Local/Temp/scp07042/home/toolnuoi.com/python/helper.py" />
         <option value="$PROJECT_DIR$/test_extensions.py" />
         <option value="$PROJECT_DIR$/post4.py" />
         <option value="$PROJECT_DIR$/local-test.py" />
@@ -144,19 +178,27 @@
         <option value="$PROJECT_DIR$/.env.python.py" />
         <option value="$PROJECT_DIR$/chat-local.py" />
         <option value="$PROJECT_DIR$/happy-birthday.py" />
-        <option value="$PROJECT_DIR$/helper.py" />
         <option value="$PROJECT_DIR$/post-local.py" />
         <option value="$PROJECT_DIR$/rep-comment.py" />
         <option value="$PROJECT_DIR$/rep-comment-local.py" />
         <option value="$PROJECT_DIR$/myutil/log.py" />
         <option value="$PROJECT_DIR$/myutil/init.py" />
         <option value="$PROJECT_DIR$/accept-transactions.py" />
-        <option value="$PROJECT_DIR$/env.py" />
         <option value="$PROJECT_DIR$/chat.py" />
         <option value="$PROJECT_DIR$/post.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/restartcore.py" />
         <option value="$PROJECT_DIR$/server.py" />
+        <option value="$PROJECT_DIR$/vip-user.py" />
+        <option value="$PROJECT_DIR$/vip-user/chat.py" />
+        <option value="$PROJECT_DIR$/vip-user/comment.py" />
+        <option value="$PROJECT_DIR$/vip-user/vip-user-helper.py" />
+        <option value="$PROJECT_DIR$/vip-user/test.py" />
+        <option value="$PROJECT_DIR$/vipuser/test.py" />
+        <option value="$PROJECT_DIR$/helper.py" />
+        <option value="$PROJECT_DIR$/vipuser/vip_user_helper.py" />
+        <option value="$PROJECT_DIR$/env.py" />
+        <option value="$PROJECT_DIR$/vipuser/chat.py" />
       </list>
     </option>
   </component>
@@ -182,14 +224,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="pythonsource" type="b2602c69:ProjectViewProjectNode" />
               <item name="pythonsource" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pythonsource" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pythonsource" type="462c0819:PsiDirectoryNode" />
+              <item name="vipuser" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -199,17 +246,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/FreelancerProject/Tool Nuôi A Cường/pythonsource/helper.py" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\FreelancerProject\Tool Nuôi A Cường\pythonsource\test" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\FreelancerProject\Tool Nuôi A Cường\pythonsource\vipuser" />
       <recent name="E:\FreelancerProject\Tool Nuôi A Cường\pythonsource\util" />
       <recent name="E:\FreelancerProject\Tool Nuôi A Cường\pythonsource" />
       <recent name="E:\myproject\message" />
       <recent name="E:\myproject\message\extensions" />
-      <recent name="E:\myproject\message\image" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\FreelancerProject\Tool Nuôi A Cường\pythonsource\test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -224,7 +272,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.accept-transactions">
+  <component name="RunManager" selected="Python.chat">
     <configuration name="accept-transactions" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -242,19 +290,19 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="chat-local" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="chat" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vipuser" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="message" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chat-local.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vipuser/chat.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -276,54 +324,54 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="post-local" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vipuser" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="message" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/post-local.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vipuser/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="rep-comment-local" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vip-user" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="message" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rep-comment-local.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vip-user/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.rep-comment-local" />
-      <item index="1" class="java.lang.String" itemvalue="Python.chat-local" />
-      <item index="2" class="java.lang.String" itemvalue="Python.post-local" />
-      <item index="3" class="java.lang.String" itemvalue="Python.accept-transactions" />
-      <item index="4" class="java.lang.String" itemvalue="Python.env" />
+      <item index="0" class="java.lang.String" itemvalue="Python.accept-transactions" />
+      <item index="1" class="java.lang.String" itemvalue="Python.env" />
+      <item index="2" class="java.lang.String" itemvalue="Python.test" />
+      <item index="3" class="java.lang.String" itemvalue="Python.test (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.chat" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.accept-transactions" />
-        <item index="1" class="java.lang.String" itemvalue="Python.env" />
-        <item index="2" class="java.lang.String" itemvalue="Python.rep-comment-local" />
-        <item index="3" class="java.lang.String" itemvalue="Python.post-local" />
-        <item index="4" class="java.lang.String" itemvalue="Python.chat-local" />
+        <item index="0" class="java.lang.String" itemvalue="Python.chat" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.accept-transactions" />
+        <item index="4" class="java.lang.String" itemvalue="Python.env" />
       </list>
     </recent_temporary>
   </component>
@@ -342,14 +390,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2965204" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.301059" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31078905" sideWeight="0.52118003" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39774558" sideWeight="0.47881997" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.531401" sideWeight="0.47881997" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -380,16 +427,11 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="10" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/image-post-logging/post-exception-100022858866847.png" />
-    <entry file="file://$PROJECT_DIR$/image-post-logging/post-exception-100016599849717.png" />
-    <entry file="file://$PROJECT_DIR$/image-post-logging/post-exception-100023890154905.png" />
-    <entry file="file://$PROJECT_DIR$/post5.py" />
-    <entry file="file://$PROJECT_DIR$/post4.py" />
     <entry file="file://$PROJECT_DIR$/post3.py" />
     <entry file="file://$PROJECT_DIR$/local-test.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -575,47 +617,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myutil/init.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="64" column="5" lean-forward="false" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rep-comment-local.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="43" />
-          <folding>
-            <element signature="e#2766#6167#0" expanded="false" />
-            <element signature="e#6211#10166#0" expanded="false" />
-            <element signature="e#10195#11535#0" expanded="false" />
-            <element signature="e#11575#13450#0" expanded="false" />
-            <element signature="e#13498#15150#0" expanded="false" />
-            <element signature="e#15536#16253#0" expanded="false" />
-            <element signature="e#16459#17658#0" expanded="false" />
-            <element signature="e#19701#20352#0" expanded="false" />
-            <element signature="e#20388#20720#0" expanded="false" />
-            <element signature="e#20761#21272#0" expanded="false" />
-            <element signature="e#21314#21563#0" expanded="false" />
-            <element signature="e#21607#22712#0" expanded="false" />
-            <element signature="e#27297#27677#0" expanded="false" />
-            <element signature="e#28215#30667#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -645,28 +650,16 @@
         <state relative-caret-position="1037">
           <caret line="70" column="96" lean-forward="false" selection-start-line="70" selection-start-column="96" selection-end-line="70" selection-end-column="96" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chat.py">
+    <entry file="file://$PROJECT_DIR$/vip-user.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restartcore.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -675,6 +668,109 @@
         <state relative-caret-position="1088">
           <caret line="64" column="56" lean-forward="false" selection-start-line="64" selection-start-column="56" selection-end-line="64" selection-end-column="56" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restartcore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#17#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vipuser/comment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="535" column="0" lean-forward="false" selection-start-line="535" selection-start-column="0" selection-end-line="576" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#2766#6167#0" expanded="false" />
+            <element signature="e#6211#10166#0" expanded="false" />
+            <element signature="e#10195#11535#0" expanded="false" />
+            <element signature="e#11575#13450#0" expanded="false" />
+            <element signature="e#13498#15150#0" expanded="false" />
+            <element signature="e#15536#16253#0" expanded="false" />
+            <element signature="e#16459#17658#0" expanded="false" />
+            <element signature="e#17716#18075#0" expanded="false" />
+            <element signature="e#18139#18381#0" expanded="false" />
+            <element signature="e#18417#19650#0" expanded="false" />
+            <element signature="e#19701#20352#0" expanded="false" />
+            <element signature="e#20388#20720#0" expanded="false" />
+            <element signature="e#20761#21272#0" expanded="false" />
+            <element signature="e#21314#21563#0" expanded="false" />
+            <element signature="e#21607#22712#0" expanded="false" />
+            <element signature="e#27297#27677#0" expanded="false" />
+            <element signature="e#28215#30667#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="56" column="37" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vipuser/vip_user_helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="72" column="59" lean-forward="false" selection-start-line="72" selection-start-column="59" selection-end-line="72" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vipuser/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/env.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vipuser/chat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myutil/init.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="185" column="43" lean-forward="false" selection-start-line="185" selection-start-column="43" selection-end-line="185" selection-end-column="43" />
+          <folding>
+            <element signature="e#3835#7236#0" expanded="false" />
+            <element signature="e#7287#8519#0" expanded="false" />
+            <element signature="e#8561#11701#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
