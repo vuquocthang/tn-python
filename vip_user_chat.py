@@ -5,8 +5,8 @@ import time
 import requests
 
 import helper
-# from xvfbwrapper import Xvfb
-# from pyvirtualdisplay import Display
+from xvfbwrapper import Xvfb
+from pyvirtualdisplay import Display
 import myutil.init
 import myutil.log as mylog
 import vip_user_helper as viphelper
@@ -35,10 +35,10 @@ def work():
 
             mylog.save("chat", "{}".format(clone))
 
-            #vdisplay = Xvfb()
-            #vdisplay.start()
-            #display = Display(visible=0, size=(800, 600))
-            #display.start()
+            vdisplay = Xvfb()
+            vdisplay.start()
+            display = Display(visible=0, size=(800, 600))
+            display.start()
 
             driver = None
 
@@ -70,8 +70,8 @@ def work():
                 driver.quit()
                 print("Done")
 
-            #display.stop()
-            #vdisplay.stop()
+            display.stop()
+            vdisplay.stop()
 
         except Exception as e:
             print(e)
