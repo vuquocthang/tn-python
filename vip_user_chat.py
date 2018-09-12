@@ -11,8 +11,7 @@ import myutil.init
 import myutil.log as mylog
 import vip_user_helper as viphelper
 
-#url = "http://toolnuoi999.tk"
-url = "http://192.168.81.139:8001"
+url = "http://toolnuoi999.tk"
 
 logging_path = os.path.join( os.path.dirname(os.path.abspath(__file__)), 'image-chat-logging')
 
