@@ -1,6 +1,9 @@
 import helper
 
 def get_message_from_keyword(keywords, message, name):
+    if len(keywords) == 0:
+        return False
+
     for k in keywords:
         if k['key'].lower() in message.lower():
             return k['value'].replace("[name]", name)
