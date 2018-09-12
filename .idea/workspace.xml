@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca71d365-ca32-4f4b-904a-838adb97c3b2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vipuser/helper.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vipuser/chat.py" afterPath="$PROJECT_DIR$/vipuser/chat.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vipuser/helper.py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vipuser/chat.py" afterPath="$PROJECT_DIR$/vip_user_chat.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vipuser/vip_user_helper.py" afterPath="$PROJECT_DIR$/vip_user_helper.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,8 +56,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vip_user_helper.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vipuser/vip_user_helper.py">
+      <file leaf-file-name="vip_user_helper.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vip_user_helper.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1224">
               <caret line="72" column="59" lean-forward="false" selection-start-line="72" selection-start-column="59" selection-end-line="72" selection-end-column="59" />
@@ -68,11 +69,9 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vipuser/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="68">
               <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -87,12 +86,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chat.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vipuser/chat.py">
+      <file leaf-file-name="vip_user_chat.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vip_user_chat.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-              <folding />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -252,6 +253,7 @@
       <recent name="E:\myproject\message\extensions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\FreelancerProject\Tool Nuôi A Cường\pythonsource" />
       <recent name="E:\FreelancerProject\Tool Nuôi A Cường\pythonsource\test" />
     </key>
   </component>
@@ -297,7 +299,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="message" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vipuser/chat.py" />
+      <option name="SCRIPT_NAME" value="E:\FreelancerProject\Tool Nuôi A Cường\pythonsource\vip_user_chat.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -713,11 +715,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vipuser/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="68">
           <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -759,19 +759,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vipuser/chat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vipuser/vip_user_helper.py">
+    <entry file="file://$PROJECT_DIR$/vip_user_helper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1224">
           <caret line="72" column="59" lean-forward="false" selection-start-line="72" selection-start-column="59" selection-end-line="72" selection-end-column="59" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vip_user_chat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
