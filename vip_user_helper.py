@@ -89,3 +89,52 @@ def request_message(driver, keywords):
     else:
         return True
 
+
+
+def rep_comment_on_mobile(driver, uid, keywords):
+    driver.get("https://m.facebook.com/{}".format(uid))
+    articles = driver.find_elements_by_xpath("//div[@id='structured_composer_async_container']/div[1]/div")
+
+    comment_links = []
+
+    for index, article in enumerate(articles):
+        try:
+            link = driver.find_element_by_xpath("//div[@id='structured_composer_async_container']/div[1]/div[{}]//a[contains(@href, 'story.php')]".format(index + 1)).get_attribute("href")
+            comment_links.append( link )
+            print( link )
+        except Exception as e:
+            link = driver.find_element_by_xpath(
+                "//div[@id='structured_composer_async_container']/div[1]/div[{}]//a[contains(@href, 'photo.php')]".format(
+                    index + 1)).get_attribute("href")
+            comment_links.append(link)
+            print(link)
+            print(e)
+
+
+    for link in comment_links:
+        try:
+            print(link)
+            driver.get(link)
+            comment_items = driver.find_elements_by_xpath("//div[@id='m_story_permalink_view']/div[2]/div[1]/div[4]/div")
+
+
+            print("comments : {}".format(len(comment_items)))
+
+            for index, item in enumerate(comment_items):
+                try:
+                    driver.get(link)
+                    comment = driver.find_element_by_xpath("//div[@id='m_story_permalink_view']/div[2]/div[1]/div[4]/div[{}]".format(index + 1)).text
+
+                    print(comment)
+
+                    if ('You replied' not in comment) and ('Bạn đã trả lời' not in comment ) and ('Bạn đã phản hồi' not in comment):
+                        message = get_message_from_keyword(keywords, comment, "")
+
+                        if message is not False:
+                            driver.find_element_by_xpath("//div[@id='m_story_permalink_view']/div[2]/div[1]/div[4]/div[{}]/div[1]/div[3]/a[1]".format(index + 1)).click()
+                            driver.find_element_by_id("composerInput").send_keys(message)
+                            driver.find_element_by_xpath("//*[@type='submit']").click()
+                except Exception as e:
+                    print(e)
+        except Exception as e:
+            print(e)

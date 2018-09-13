@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca71d365-ca32-4f4b-904a-838adb97c3b2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vip_user_chat.py" afterPath="$PROJECT_DIR$/vip_user_chat.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vip_user_comment.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vip_user_helper.py" afterPath="$PROJECT_DIR$/vip_user_helper.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,8 +18,8 @@
       <file leaf-file-name="helper.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/helper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="535" column="0" lean-forward="false" selection-start-line="535" selection-start-column="0" selection-end-line="576" selection-end-column="0" />
+            <state relative-caret-position="428">
+              <caret line="964" column="20" lean-forward="true" selection-start-line="916" selection-start-column="0" selection-end-line="964" selection-end-column="20" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
                 <element signature="e#2766#6167#0" expanded="false" />
@@ -35,8 +37,10 @@
                 <element signature="e#20761#21272#0" expanded="false" />
                 <element signature="e#21314#21563#0" expanded="false" />
                 <element signature="e#21607#22712#0" expanded="false" />
+                <element signature="e#22747#23871#0" expanded="false" />
                 <element signature="e#27297#27677#0" expanded="false" />
                 <element signature="e#28215#30667#0" expanded="false" />
+                <element signature="e#30714#32876#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -57,9 +61,13 @@
       <file leaf-file-name="vip_user_helper.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vip_user_helper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-              <folding />
+            <state relative-caret-position="306">
+              <caret line="93" column="47" lean-forward="false" selection-start-line="93" selection-start-column="47" selection-end-line="93" selection-end-column="47" />
+              <folding>
+                <element signature="e#305#1510#0" expanded="false" />
+                <element signature="e#1555#2794#0" expanded="false" />
+                <element signature="e#2852#5013#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -86,14 +94,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vip_user_chat.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="vip_user_chat.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vip_user_chat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="47" column="20" lean-forward="false" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+            <state relative-caret-position="221">
+              <caret line="49" column="79" lean-forward="false" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="79" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vip_user_comment.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vip_user_comment.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="867">
+              <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rep-comment.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rep-comment.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="36" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -122,16 +152,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="comment.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vipuser/comment.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -154,7 +174,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/local-test.py" />
         <option value="$PROJECT_DIR$/test2.py" />
         <option value="$PROJECT_DIR$/util/geckodriver.log" />
         <option value="$PROJECT_DIR$/util/manifest2.json" />
@@ -201,10 +220,11 @@
         <option value="$PROJECT_DIR$/helper.py" />
         <option value="$PROJECT_DIR$/vipuser/vip_user_helper.py" />
         <option value="$PROJECT_DIR$/vipuser/chat.py" />
-        <option value="$PROJECT_DIR$/vip_user_helper.py" />
         <option value="$PROJECT_DIR$/vipuser/test.py" />
         <option value="$PROJECT_DIR$/env.py" />
         <option value="$PROJECT_DIR$/vip_user_chat.py" />
+        <option value="$PROJECT_DIR$/vip_user_helper.py" />
+        <option value="$PROJECT_DIR$/vip_user_comment.py" />
       </list>
     </option>
   </component>
@@ -440,18 +460,11 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="11" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/local-test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/post-click-view-photo.png" />
     <entry file="file://$PROJECT_DIR$/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -615,13 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rep-comment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rep-comment-local.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -694,33 +700,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="535" column="0" lean-forward="false" selection-start-line="535" selection-start-column="0" selection-end-line="576" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-            <element signature="e#2766#6167#0" expanded="false" />
-            <element signature="e#6211#10166#0" expanded="false" />
-            <element signature="e#10195#11535#0" expanded="false" />
-            <element signature="e#11575#13450#0" expanded="false" />
-            <element signature="e#13498#15150#0" expanded="false" />
-            <element signature="e#15536#16253#0" expanded="false" />
-            <element signature="e#16459#17658#0" expanded="false" />
-            <element signature="e#17716#18075#0" expanded="false" />
-            <element signature="e#18139#18381#0" expanded="false" />
-            <element signature="e#18417#19650#0" expanded="false" />
-            <element signature="e#19701#20352#0" expanded="false" />
-            <element signature="e#20388#20720#0" expanded="false" />
-            <element signature="e#20761#21272#0" expanded="false" />
-            <element signature="e#21314#21563#0" expanded="false" />
-            <element signature="e#21607#22712#0" expanded="false" />
-            <element signature="e#27297#27677#0" expanded="false" />
-            <element signature="e#28215#30667#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myutil/init.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="89">
@@ -769,14 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vip_user_helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/env.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -785,12 +756,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/rep-comment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="36" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="964" column="20" lean-forward="true" selection-start-line="916" selection-start-column="0" selection-end-line="964" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#2766#6167#0" expanded="false" />
+            <element signature="e#6211#10166#0" expanded="false" />
+            <element signature="e#10195#11535#0" expanded="false" />
+            <element signature="e#11575#13450#0" expanded="false" />
+            <element signature="e#13498#15150#0" expanded="false" />
+            <element signature="e#15536#16253#0" expanded="false" />
+            <element signature="e#16459#17658#0" expanded="false" />
+            <element signature="e#17716#18075#0" expanded="false" />
+            <element signature="e#18139#18381#0" expanded="false" />
+            <element signature="e#18417#19650#0" expanded="false" />
+            <element signature="e#19701#20352#0" expanded="false" />
+            <element signature="e#20388#20720#0" expanded="false" />
+            <element signature="e#20761#21272#0" expanded="false" />
+            <element signature="e#21314#21563#0" expanded="false" />
+            <element signature="e#21607#22712#0" expanded="false" />
+            <element signature="e#22747#23871#0" expanded="false" />
+            <element signature="e#27297#27677#0" expanded="false" />
+            <element signature="e#28215#30667#0" expanded="false" />
+            <element signature="e#30714#32876#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vip_user_helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="93" column="47" lean-forward="false" selection-start-line="93" selection-start-column="47" selection-end-line="93" selection-end-column="47" />
+          <folding>
+            <element signature="e#305#1510#0" expanded="false" />
+            <element signature="e#1555#2794#0" expanded="false" />
+            <element signature="e#2852#5013#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vip_user_chat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="47" column="20" lean-forward="false" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+        <state relative-caret-position="221">
+          <caret line="49" column="79" lean-forward="false" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="79" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vip_user_comment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
