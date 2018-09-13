@@ -30,6 +30,8 @@ def work():
                 'api_key': helper.get_api_key()
             }).json()
 
+            print(clone)
+
             if clone is None:
                 break
 
