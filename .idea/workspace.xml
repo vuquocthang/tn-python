@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca71d365-ca32-4f4b-904a-838adb97c3b2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vip_user_comment.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vip_user_helper.py" afterPath="$PROJECT_DIR$/vip_user_helper.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vip_user_chat.py" afterPath="$PROJECT_DIR$/vip_user_chat.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vip_user_comment.py" afterPath="$PROJECT_DIR$/vip_user_comment.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -97,8 +96,8 @@
       <file leaf-file-name="vip_user_chat.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vip_user_chat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="49" column="79" lean-forward="false" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="79" />
+            <state relative-caret-position="153">
+              <caret line="24" column="59" lean-forward="false" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -109,8 +108,8 @@
       <file leaf-file-name="vip_user_comment.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vip_user_comment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+            <state relative-caret-position="136">
+              <caret line="23" column="59" lean-forward="false" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -222,9 +221,9 @@
         <option value="$PROJECT_DIR$/vipuser/chat.py" />
         <option value="$PROJECT_DIR$/vipuser/test.py" />
         <option value="$PROJECT_DIR$/env.py" />
-        <option value="$PROJECT_DIR$/vip_user_chat.py" />
         <option value="$PROJECT_DIR$/vip_user_helper.py" />
         <option value="$PROJECT_DIR$/vip_user_comment.py" />
+        <option value="$PROJECT_DIR$/vip_user_chat.py" />
       </list>
     </option>
   </component>
@@ -807,8 +806,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vip_user_chat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="49" column="79" lean-forward="false" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="79" />
+        <state relative-caret-position="153">
+          <caret line="24" column="59" lean-forward="false" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -817,8 +816,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vip_user_comment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        <state relative-caret-position="136">
+          <caret line="23" column="59" lean-forward="false" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

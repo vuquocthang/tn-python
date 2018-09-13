@@ -21,7 +21,7 @@ def create_workers():
 def work():
     while True:
         try:
-            clone = requests.get("{}/api/clones/Vip/all".format(url), {
+            clone = requests.get("{}/api/clones/Vip/comment".format(url), {
                 'api_key': helper.get_api_key()
             }).json()[0]
 
