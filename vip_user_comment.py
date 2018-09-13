@@ -23,7 +23,7 @@ def work():
         try:
             clone = requests.get("{}/api/clones/Vip/comment".format(url), {
                 'api_key': helper.get_api_key()
-            }).json()[0]
+            }).json()
 
             if clone is None:
                 break
