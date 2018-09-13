@@ -30,7 +30,7 @@ def work():
                 'api_key': helper.get_api_key()
             }).json()
 
-            print(clone)
+            #print(clone)
 
             if clone is None:
                 break
@@ -46,6 +46,7 @@ def work():
 
             print("clone ip : {}".format(clone['ip']) )
 
+            '''
             try:
                 driver = myutil.init._init(clone['ip'], clone['port'], clone['c_user'], clone['xs'])
 
@@ -73,7 +74,7 @@ def work():
             finally:
                 driver.quit()
                 print("Done")
-
+            '''
             display.stop()
             vdisplay.stop()
 
