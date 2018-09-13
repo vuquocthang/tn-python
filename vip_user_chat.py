@@ -74,7 +74,7 @@ def work():
             vdisplay.stop()
 
         except Exception as e:
-            print(e)
+            print("Ex: {}".format(e))
 
         time.sleep(5)
 create_workers()
