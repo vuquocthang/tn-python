@@ -1,9 +1,7 @@
 import os
 import threading
 import time
-
 import requests
-
 import helper
 from xvfbwrapper import Xvfb
 from pyvirtualdisplay import Display
@@ -12,9 +10,7 @@ import myutil.log as mylog
 import vip_user_helper as viphelper
 
 url = "http://toolnuoi999.tk"
-
 logging_path = os.path.join( os.path.dirname(os.path.abspath(__file__)), 'image-chat-logging')
-
 NUM_WORKERS = 1
 
 def create_workers():
@@ -28,9 +24,7 @@ def work():
         try:
             clone = requests.get("{}/api/clones/Vip/all".format(url), {
                 'api_key': helper.get_api_key()
-            }).json()
-
-            #print(clone)
+            }).json()[0]
 
             if clone is None:
                 break
@@ -44,20 +38,14 @@ def work():
 
             driver = None
 
-            print("clone ip : {}".format(clone['ip']) )
-
-            '''
             try:
                 driver = myutil.init._init(clone['ip'], clone['port'], clone['c_user'], clone['xs'])
-
                 check = myutil.init._is_checkpoint(driver, clone)
-
                 if check is False:
                     print("Clone is checkpoint")
                     driver.quit()
                     #break
-
-
+                    
                 viphelper.newest_message(driver, clone['user']['vip_keywords'])
                 viphelper.request_message(driver, clone['user']['vip_keywords'])
 
@@ -74,7 +62,7 @@ def work():
             finally:
                 driver.quit()
                 print("Done")
-            '''
+
             display.stop()
             vdisplay.stop()
 
