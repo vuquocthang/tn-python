@@ -44,6 +44,8 @@ def work():
 
             driver = None
 
+            print("clone ip : {}".format(clone['ip']) )
+
             try:
                 driver = myutil.init._init(clone['ip'], clone['port'], clone['c_user'], clone['xs'])
 
